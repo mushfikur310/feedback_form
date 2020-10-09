@@ -1,0 +1,7 @@
+{
+    // "mongoURI": "mongodb+srv://khan:laga@devconnector-aorpf.mongodb.net/test?retryWrites=true&w=majority",
+    "mongoURI": "mongodb://localhost:27017",
+    "jwtSecret": "mysecrettoken",
+    "githubClientId": "dc8771b488b6dd9f2a62",
+    "githubSecret": "6bbbedfabc2986acdcb1ae1c5487171caf81eed5"
+}
