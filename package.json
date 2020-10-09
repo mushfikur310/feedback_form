@@ -1,7 +1,7 @@
 {
-  "name": "connector",
+  "name": "feedback",
   "version": "1.0.0",
-  "description": "Social network for developers",
+  "description": "Feedback data generator",
   "main": "server.js",
   "scripts": {
     "start": "node server",
@@ -10,24 +10,12 @@
   "author": "Mushfikur",
   "license": "MIT",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
     "config": "^3.3.1",
     "cors": "^2.8.5",
-    "exceljs": "^4.1.1",
     "express": "^4.17.1",
-    "express-validator": "^6.4.0",
-    "fs": "^0.0.1-security",
-    "gravatar": "^1.8.0",
-    "json2xls": "^0.1.2",
-    "jsonwebtoken": "^8.5.1",
-    "moment": "^2.29.1",
-    "mongodb": "^3.6.2",
-    "mongoose": "^5.9.10",
-    "redux-devtools-extension": "^2.13.8",
-    "request": "^2.88.2"
+    "mongodb": "^3.6.2"
   },
   "devDependencies": {
-    "concurrently": "^5.2.0",
     "nodemon": "^2.0.3"
   }
 }
