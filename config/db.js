@@ -4,25 +4,6 @@ const config = require('config');
 
 const MongoUrl = config.get('mongoURI');
 
-// const connectDB = async () => {
-//     try {
-//         return await MongoClient.connect(db, { 
-//             useUnifiedTopology: true,
-//             useNewUrlParser: true,
-//             useCreateIndex: true,
-//             useFindAndModify: false
-//         });
-        
-//         console.group('MongoDB conected !');
-//     } catch (err) {
-//         console.error(err.message);
-//         // Exit process with failure
-//         process.exit(1);
-//     }
-// }
-
-// module.exports = connectDB;
-
 module.exports={
     dbConn:function(){
         return new Promise((resolve,reject) => {
