@@ -11,6 +11,6 @@ const PORT = process.env.PORT || 5000
 
 app.get('/', (req, res) => res.send('API Running'));
 
-app.use('/api/feedback', require('./routes/api/feedback'));
+app.use('/feedback_api/feedback', require('./routes/api/feedback'));
 
 app.listen(PORT, () => console.log(`Server started on post ${PORT}`));
