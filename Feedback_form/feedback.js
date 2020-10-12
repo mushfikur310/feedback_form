@@ -1207,7 +1207,7 @@ $(document).ready(() => {
 
 async function senddata(feedbackValues) {
   try{
-    let message = await fetch(`${API_URL}/api/feedback`, {
+    let message = await fetch(`${API_URL}/feedback`, {
       method: "POST",
       body: JSON.stringify(feedbackValues),
       headers: {
