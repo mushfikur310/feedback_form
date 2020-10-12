@@ -9,7 +9,7 @@ module.exports={
         return new Promise((resolve,reject) => {
             MongoClient.connect(MongoUrl,{ useUnifiedTopology: true },(error,db) => {
                 if(error) reject(error)
-                const dbc = db.db("formdata")
+                const dbc = db.db("feedback_db")
                 resolve(dbc)
             })
         })

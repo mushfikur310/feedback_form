@@ -1,0 +1,688 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Reverie Language Technologies Limited</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+
+  <style type="text/css">
+		button{background-color: darkslategrey;color: white;border: 0;font-size: 18px;font-weight: 500;border-radius: 7px;padding: 10px 10px;cursor: pointer;white-space: nowrap;}
+		#success{background: green;}
+		#error{background: red;}
+		#warning{background: coral;}
+		#info{background: cornflowerblue;}
+		#question{background: grey;}
+	</style>
+
+</head>
+
+<body>
+	<div class="center">
+		<div class="brand">
+			<img src="./images/reverieLogo.svg" alt="reverieinc" width="200px" />
+		</div>
+		<div class="text1">
+			We at Reverie help our customers and partners with the right technologies to engage with their end users in Indian languages. 
+		</div>
+		<div class="motto">
+			<strong>Our motto is</strong> 
+		</div>
+		<div class="motto">
+			‘Language Equality on the Internet™’ 
+		</div>
+		<div class="reverie-cares"><strong>Reverie Cares</strong></div>
+			<div class="form-content">
+				<form>
+				  <div class="form-group row">
+				    <label for="name" class="col-sm-3 col-form-label">Name</label>
+				    <div class="col-sm-7">
+				      <input type="text" class="form-control" id="name" value="">
+				    </div>
+				  </div>
+				  <div class="form-group row">
+				    <label for="email" class="col-sm-3 col-form-label">Official email ID</label>
+				    <div class="col-sm-7">
+				      <input type="email" class="form-control" id="email">
+				    </div>
+				  </div>
+				  <div class="animate__slideOutUp">
+				  	How do you feel about your overall engagement with Reverie?
+				  </div>
+				  <div class="thumb">
+				  	<img class="thumb_5" src="./images/thumb_5.png" alt="thumb_5" width="28px" id="engagement5" />
+				  	<img class="thumb_4" src="./images/thumb_4.png" alt="Thumb_4" width="36px" id="engagement4" />
+				  	<img class="thumb_3" src="./images/thumb_3.png" alt="Thumb_3" width="36px" id="engagement3" />
+				  	<img class="thumb_2" src="./images/thumb_2.png" alt="Thumb_2" width="34px" id="engagement2" />
+				  	<img class="thumb_1" src="./images/thumb_1.png" alt="Thumb_1" width="29px" id="engagement1" />
+				  </div>
+				  <div class="feed">
+				  	Please rate the effectiveness of our Products/solutions in resolving your problems
+				  </div>
+				  <div class="star-rating">
+					  <input type="radio" id="5-stars" name="rating" value="5" />
+					  <label for="5-stars" class="star" id="engagement-star5">&#9733;</label>
+					  <input type="radio" id="4-stars" name="rating" value="4" />
+					  <label for="4-stars" class="star" id="engagement-star4">&#9733;</label>
+					  <input type="radio" id="3-stars" name="rating" value="3" />
+					  <label for="3-stars" class="star" id="engagement-star3">&#9733;</label>
+					  <input type="radio" id="2-stars" name="rating" value="2" />
+					  <label for="2-stars" class="star" id="engagement-star2">&#9733;</label>
+					  <input type="radio" id="1-star" name="rating" value="1" />
+					  <label for="1-star" class="star" id="engagement-star1">&#9733;</label>
+					</div>
+				  <div class="feed">
+				  	How likely are you to refer Reverie to other companies looking for language localization requirements?
+				  </div>
+				  <div class="thumb">
+				  	<img class="thumb_5" src="./images/thumb_5.png" alt="thumb_5" width="28px" id="refer_reverie5" />
+				  	<img class="thumb_4" src="./images/thumb_4.png" alt="thumb_4" width="36px" id="refer_reverie4" />
+				  	<img class="thumb_3" src="./images/thumb_3.png" alt="thumb_3" width="36px" id="refer_reverie3" />
+				  	<img class="thumb_2" src="./images/thumb_2.png" alt="thumb_2" width="34px" id="refer_reverie2" />
+				  	<img class="thumb_1" src="./images/thumb_1.png" alt="thumb_1" width="29px" id="refer_reverie1" />
+				  </div>
+				  <div class="feed">
+				  	Would you consider Reverie as one of the Top-3 companies among the language technology businesses in India?
+				  </div>
+				  <div class="thumb">
+				  	<img class="thumb_5" src="./images/thumb_5.png" alt="thumb_5" width="28px" id="top5" />
+				  	<img class="thumb_4" src="./images/thumb_4.png" alt="thumb_4" width="36px" id="top4" />
+				  	<img class="thumb_3" src="./images/thumb_3.png" alt="thumb_3" width="36px" id="top3" />
+				  	<img class="thumb_2" src="./images/thumb_2.png" alt="thumb_2" width="34px" id="top2" />
+				  	<img class="thumb_1" src="./images/thumb_1.png" alt="thumb_1" width="29px" id="top1" />
+				  </div>
+				  <div class="feed">
+				  	Did our sales and pre-sales teams understand your requirements well and suggest appropriate solutions?
+				  </div>
+				  <div class="sales-solution">
+					    <dl class="row">
+						  <dt class="col-sm-8 rating">1. Understanding of your business problem</dt>
+						  <dd class="col-sm-4">
+						  	<div class="sales_bp-rating">
+							  <input type="radio" id="5-sales_bp" name="sales_bp" value="bp5" />
+							  <label for="5-sales_bp" class="sales_bp" id="sales_bp_star5">&#9733;</label>
+							  <input type="radio" id="4-sales_bp" name="sales_bp" value="bp4" />
+							  <label for="4-sales_bp" class="sales_bp" id="sales_bp_star4">&#9733;</label>
+							  <input type="radio" id="3-sales_bp" name="sales_bp" value="bp3" />
+							  <label for="3-sales_bp" class="sales_bp" id="sales_bp_star3">&#9733;</label>
+							  <input type="radio" id="2-sales_bp" name="sales_bp" value="bp2" />
+							  <label for="2-sales_bp" class="sales_bp" id="sales_bp_star2">&#9733;</label>
+							  <input type="radio" id="1-sales_bp" name="sales_bp" value="bp1" />
+							  <label for="1-sales_bp" class="sales_bp" id="sales_bp_star1">&#9733;</label>
+							</div>
+						  </dd>
+						  <dt class="col-sm-8 rating">2. Explanation of the right solution for your business</dt>
+						  <dd class="col-sm-4">
+						  	<div class="sales_bs-rating">
+							  <input type="radio" id="5-sales_bs" name="sales_bs" value="bs5" />
+							  <label for="5-sales_bs" class="sales_bs" id="sales_bs_star5">&#9733;</label>
+							  <input type="radio" id="4-sales_bs" name="sales_bs" value="bs4" />
+							  <label for="4-sales_bs" class="sales_bs" id="sales_bs_star4">&#9733;</label>
+							  <input type="radio" id="3-sales_bs" name="sales_bs" value="bs3" />
+							  <label for="3-sales_bs" class="sales_bs" id="sales_bs_star3">&#9733;</label>
+							  <input type="radio" id="2-sales_bs" name="sales_bs" value="bs2" />
+							  <label for="2-sales_bs" class="sales_bs" id="sales_bs_star2">&#9733;</label>
+							  <input type="radio" id="1-sales_bs" name="sales_bs" value="bs1" />
+							  <label for="1-sales_bs" class="sales_bs" id="sales_bs_star1">&#9733;</label>
+							</div>
+						  </dd>
+						  <dt class="col-sm-8 rating">3. Timely response to your queries</dt>
+						  <dd class="col-sm-4">
+						  	<div class="sales_br-rating">
+							  <input type="radio" id="5-sales_br" name="sales_br" value="br5" />
+							  <label for="5-sales_br" class="sales_br" id="sales_br_star5">&#9733;</label>
+							  <input type="radio" id="4-sales_br" name="sales_br" value="br4" />
+							  <label for="4-sales_br" class="sales_br" id="sales_br_star4">&#9733;</label>
+							  <input type="radio" id="3-sales_br" name="sales_br" value="br3" />
+							  <label for="3-sales_br" class="sales_br" id="sales_br_star3">&#9733;</label>
+							  <input type="radio" id="2-sales_br" name="sales_br" value="br2" />
+							  <label for="2-sales_br" class="sales_br" id="sales_br_star2">&#9733;</label>
+							  <input type="radio" id="1-sales_br" name="sales_br" value="br1" />
+							  <label for="1-sales_br" class="sales_br" id="sales_br_star1">&#9733;</label>
+							</div>
+						  </dd>
+						</dl>
+				  </div>
+				  <div class="feed">
+				  	Please choose your relationship with Reverie:
+				  </div>
+				  <div class="sales-solution">
+				  	<div class="form-check" id="customer">
+					  <input class="form-check-input" type="radio" name="exampleRadios" id="customerRadio" value="option1" checked>
+					  <label class="form-check-label" for="customerRadio">
+					    I am a Reverie customer
+					  </label>
+					</div>
+					<div class="form-check" id="partner">
+					  <input class="form-check-input" type="radio" name="exampleRadios" id="partnerRadio" value="option2">
+					  <label class="form-check-label" for="partnerRadio">
+					    I am a Reverie partner
+					  </label>
+					</div>
+					<div class="form-check" id="other">
+					  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+					  <label class="form-check-label" for="exampleRadios3">
+					    Engaged, however could not close procurement
+					  </label>
+					</div>
+				  </div>
+				  <div class="customer-section">
+				  	<div class="customer-feedback">
+				  	Delivery / Customer
+				  </div>
+				  <div class="customer-feedback-list">
+				  	1. How effectively has Reverie been able to deliver to your expectations?
+				  </div>
+				  <div class="customer-feedback-thumb">
+				  	<img class="thumb_5" src="./images/thumb_5.png" alt="thumb_5" id="reverie_delivery_expectation5" width="28px" />
+				  	<img class="thumb_4" src="./images/thumb_4.png" alt="thumb_4" id="reverie_delivery_expectation4" width="36px" />
+				  	<img class="thumb_3" src="./images/thumb_3.png" alt="thumb_3" id="reverie_delivery_expectation3" width="36px" />
+				  	<img class="thumb_2" src="./images/thumb_2.png" alt="thumb_2" id="reverie_delivery_expectation2" width="34px" />
+				  	<img class="thumb_1" src="./images/thumb_1.png" alt="thumb_1" id="reverie_delivery_expectation1" width="29px" />
+				  </div>
+				  	<div class="customer-expectation12">
+					  	<div class="form-group">
+						    <label for="exampleFormControlTextarea1">We are sorry to hear this. Please share more details about how we can improve your experience.</label>
+						    <textarea class="form-control expectations" id="bad-text-area" rows="2"></textarea>
+						</div>
+					</div>
+					<div class="customer-expectation3">
+					  	<div class="form-group">
+						    <label for="exampleFormControlTextarea1">It sounds like we could have done better. Where can we improve?</label>
+						    <textarea class="form-control expectations" id="good-text-area" rows="2"></textarea>
+						</div>
+					</div>
+					<div class="customer-expectation45">
+					  	<div class="form-group">
+						    <label for="exampleFormControlTextarea1">Glad to hear this. Which part did you like the most?</label>
+						    <textarea class="form-control expectations" id="excellent-text-area" rows="2"></textarea>
+						</div>
+					</div>
+				  <div class="customer-feedback-list">
+				  	2. How well did we help you in reducing the time to launch your localized products/services?
+				  </div>
+				  <div class="customer-feedback-thumb">
+				  	<img class="thumb_5" src="./images/thumb_5.png" alt="thumb_5" width="28px" id="launch5" />
+				  	<img class="thumb_4" src="./images/thumb_4.png" alt="thumb_4" width="36px" id="launch4" />
+				  	<img class="thumb_3" src="./images/thumb_3.png" alt="thumb_3" width="36px" id="launch3" />
+				  	<img class="thumb_2" src="./images/thumb_2.png" alt="thumb_2" width="34px" id="launch2" />
+				  	<img class="thumb_1" src="./images/thumb_1.png" alt="thumb_1" width="29px" id="launch1" />
+				  </div>
+				  <div class="customer-feedback-list">
+				  	3. Has our team been able to deliver the product/solution as per your expectations and within agreed timelines?
+				  </div>
+				  <div class="customer-feedback-thumb">
+				  	<img class="thumb_5" src="./images/thumb_5.png" alt="thumb_5" width="28px" id="onTimeDelivery5" />
+				  	<img class="thumb_4" src="./images/thumb_4.png" alt="thumb_4" width="36px" id="onTimeDelivery4" />
+				  	<img class="thumb_3" src="./images/thumb_3.png" alt="thumb_3" width="36px" id="onTimeDelivery3" />
+				  	<img class="thumb_2" src="./images/thumb_2.png" alt="thumb_2" width="34px" id="onTimeDelivery2" />
+				  	<img class="thumb_1" src="./images/thumb_1.png" alt="thumb_1" width="29px" id="onTimeDelivery1" />
+				  </div>
+				  <div class="customer-feedback-list">
+				  	4. Please rate the Reverie team’s overall performance on the following items:
+				  </div>
+				  <div class="customer-feedback-thumb">
+					    <dl class="row">
+						  <dt class="col-sm-8 rating">1. Skill in delivering solutions:</dt>
+						  <dd class="col-sm-4">
+						  	<div class="skill_delivery_solution-rating">
+							  <input type="radio" id="5-skill_delivery_solution" name="skill_delivery_solution" value="sd5" />
+							  <label for="5-skill_delivery_solution" class="skill_delivery_solution" id="skill_delivery_solution_star5">&#9733;</label>
+							  <input type="radio" id="4-skill_delivery_solution" name="skill_delivery_solution" value="sd4" />
+							  <label for="4-skill_delivery_solution" class="skill_delivery_solution" id="skill_delivery_solution_star4">&#9733;</label>
+							  <input type="radio" id="3-skill_delivery_solution" name="skill_delivery_solution" value="sd3" />
+							  <label for="3-skill_delivery_solution" class="skill_delivery_solution" id="skill_delivery_solution_star3">&#9733;</label>
+							  <input type="radio" id="2-skill_delivery_solution" name="skill_delivery_solution" value="sd2" />
+							  <label for="2-skill_delivery_solution" class="skill_delivery_solution" id="skill_delivery_solution_star2">&#9733;</label>
+							  <input type="radio" id="1-skill_delivery_solution" name="skill_delivery_solution" value="sd1" />
+							  <label for="1-skill_delivery_solution" class="skill_delivery_solution" id="skill_delivery_solution_star1">&#9733;</label>
+							</div>
+						  </dd>
+						  <dt class="col-sm-8 rating">2. Responsiveness to your queries:</dt>
+						  <dd class="col-sm-4">
+						  	<div class="response_to_query-rating">
+							  <input type="radio" id="5-response_to_query" name="response_to_query" value="rq5" />
+							  <label for="5-response_to_query" class="response_to_query" id="response_to_query_star5">&#9733;</label>
+							  <input type="radio" id="4-response_to_query" name="response_to_query" value="rq4" />
+							  <label for="4-response_to_query" class="response_to_query" id="response_to_query_star4">&#9733;</label>
+							  <input type="radio" id="3-response_to_query" name="response_to_query" value="rq3" />
+							  <label for="3-response_to_query" class="response_to_query" id="response_to_query_star3">&#9733;</label>
+							  <input type="radio" id="2-response_to_query" name="response_to_query" value="rq2" />
+							  <label for="2-response_to_query" class="response_to_query" id="response_to_query_star2">&#9733;</label>
+							  <input type="radio" id="1-response_to_query" name="response_to_query" value="rq1" />
+							  <label for="1-response_to_query" class="response_to_query" id="response_to_query_star1">&#9733;</label>
+							</div>
+						  </dd>
+						  <dt class="col-sm-8 rating">3. Domain expertise:</dt>
+						  <dd class="col-sm-4">
+						  	<div class="domain_expertise-rating">
+							  <input type="radio" id="5-domain_expertise" name="domain_expertise" value="de5" />
+							  <label for="5-domain_expertise" class="domain_expertise" id="domain_expertise_star5">&#9733;</label>
+							  <input type="radio" id="4-domain_expertise" name="domain_expertise" value="de4" />
+							  <label for="4-domain_expertise" class="domain_expertise" id="domain_expertise_star4">&#9733;</label>
+							  <input type="radio" id="3-domain_expertise" name="domain_expertise" value="de3" />
+							  <label for="3-domain_expertise" class="domain_expertise" id="domain_expertise_star3">&#9733;</label>
+							  <input type="radio" id="2-domain_expertise" name="domain_expertise" value="de2" />
+							  <label for="2-domain_expertise" class="domain_expertise" id="domain_expertise_star2">&#9733;</label>
+							  <input type="radio" id="1-domain_expertise" name="domain_expertise" value="de1" />
+							  <label for="1-domain_expertise" class="domain_expertise" id="domain_expertise_star1">&#9733;</label>
+							</div>
+						  </dd>
+						</dl>
+				  </div>
+				  <div class="customer-feedback-list">
+				  	5. Would you consider Reverie as your preferred solution provider for your Localization requirements?
+				  </div>
+				  <div class="customer-feedback-thumb">
+				  	<img class="thumb_5" src="./images/thumb_5.png" alt="thumb_5" width="28px" id="preferred_solution_provider5" />
+				  	<img class="thumb_4" src="./images/thumb_4.png" alt="thumb_4" width="36px" id="preferred_solution_provider4" />
+				  	<img class="thumb_3" src="./images/thumb_3.png" alt="thumb_3" width="36px" id="preferred_solution_provider3" />
+				  	<img class="thumb_2" src="./images/thumb_2.png" alt="thumb_2" width="34px" id="preferred_solution_provider2" />
+				  	<img class="thumb_1" src="./images/thumb_1.png" alt="thumb_1" width="29px" id="preferred_solution_provider1" />
+				  </div>
+				  <div class="customer-feedback-list">
+				  	6. How comprehensive and innovative are Reverie’s products related to Indian languages?
+				  </div>
+				  <div class="customer-feedback-thumb">
+				  	<img class="thumb_5" src="./images/thumb_5.png" alt="thumb_5" width="28px" id="innovative5" />
+				  	<img class="thumb_4" src="./images/thumb_4.png" alt="thumb_3" width="36px" id="innovative4" />
+				  	<img class="thumb_3" src="./images/thumb_3.png" alt="thumb_3" width="36px" id="innovative3" />
+				  	<img class="thumb_2" src="./images/thumb_2.png" alt="thumb_2" width="34px" id="innovative2" />
+				  	<img class="thumb_1" src="./images/thumb_1.png" alt="thumb_1" width="29px" id="innovative1" />
+				  </div>
+				  <div class="customer-feedback-list">
+				  	7. How effectively does Reverie help your business by sharing best practices related to languages?
+				  </div>
+				  <div class="customer-feedback-thumb">
+				  	<img class="thumb_5" src="./images/thumb_5.png" alt="thumb_5" width="28px" id="best_practices5" />
+				  	<img class="thumb_4" src="./images/thumb_4.png" alt="thumb_4" width="36px" id="best_practices4" />
+				  	<img class="thumb_3" src="./images/thumb_3.png" alt="thumb_3" width="36px" id="best_practices3" />
+				  	<img class="thumb_2" src="./images/thumb_2.png" alt="thumb_2" width="34px" id="best_practices2" />
+				  	<img class="thumb_1" src="./images/thumb_1.png" alt="thumb_1" width="29px" id="best_practices1" />
+				  </div>
+				  <div class="customer-feedback-list">
+				  	8. Have you experienced our translation services?
+				  </div>
+				  <div class="customer-feedback-thumb">
+				  	<div class="row">
+					    <div class="col-sm-2">
+					    	<span class="badge badge-pill badge-info" id="open-experience">Yes</span>
+					    </div>
+					    <div class="col-sm-2">
+					    	<span class="badge badge-pill badge-danger" id="close-experience">No</span>
+					    </div>
+					</div>
+						<div id="customer-experience">
+							<div class="customer-experience">
+							Please rate our translations based on:
+							</div>
+							<div class="customer-feedback-thumb">
+							    <dl class="row">
+								  <dt class="col-sm-8 rating">a. Quality of translation:</dt>
+								  <dd class="col-sm-4">
+								  	<div class="translation_quality-rating">
+									  <input type="radio" id="5-translation_quality" name="translation_quality" value="translation_quality5" />
+									  <label for="5-translation_quality" class="translation_quality" id="translation_quality_star5">&#9733;</label>
+									  <input type="radio" id="4-translation_quality" name="translation_quality" value="translation_quality4" />
+									  <label for="4-translation_quality" class="translation_quality" id="translation_quality_star4">&#9733;</label>
+									  <input type="radio" id="3-translation_quality" name="translation_quality" value="translation_quality3" />
+									  <label for="3-translation_quality" class="translation_quality" id="translation_quality_star3">&#9733;</label>
+									  <input type="radio" id="2-translation_quality" name="translation_quality" value="translation_quality2" />
+									  <label for="2-translation_quality" class="translation_quality" id="translation_quality_star2">&#9733;</label>
+									  <input type="radio" id="1-translation_quality" name="translation_quality" value="translation_quality1" />
+									  <label for="1-translation_quality" class="translation_quality" id="translation_quality_star1">&#9733;</label>
+									</div>
+								  </dd>
+								  <dt class="col-sm-8 rating">b. Time taken for translation:</dt>
+								  <dd class="col-sm-4">
+								  	<div class="time_taken-rating">
+									  <input type="radio" id="5-time_taken" name="time_taken" value="time_taken5" />
+									  <label for="5-time_taken" class="time_taken" id="time_taken_star5">&#9733;</label>
+									  <input type="radio" id="4-time_taken" name="time_taken" value="time_taken4" />
+									  <label for="4-time_taken" class="time_taken" id="time_taken_star4">&#9733;</label>
+									  <input type="radio" id="3-time_taken" name="time_taken" value="time_taken3" />
+									  <label for="3-time_taken" class="time_taken" id="time_taken_star3">&#9733;</label>
+									  <input type="radio" id="2-time_taken" name="time_taken" value="time_taken2" />
+									  <label for="2-time_taken" class="time_taken" id="time_taken_star2">&#9733;</label>
+									  <input type="radio" id="1-time_taken" name="time_taken" value="time_taken1" />
+									  <label for="1-time_taken" class="time_taken" id="time_taken_star1">&#9733;</label>
+									</div>
+								  </dd>
+								  <dt class="col-sm-8 rating">c. Ability to understand your domain:</dt>
+								  <dd class="col-sm-4">
+								  	<div class="ability-rating">
+									  <input type="radio" id="5-ability" name="ability" value="ability5" />
+									  <label for="5-ability" class="ability" id="ability_star5">&#9733;</label>
+									  <input type="radio" id="4-ability" name="ability" value="ability4" />
+									  <label for="4-ability" class="ability" id="ability_star4">&#9733;</label>
+									  <input type="radio" id="3-ability" name="ability" value="ability3" />
+									  <label for="3-ability" class="ability" id="ability_star3">&#9733;</label>
+									  <input type="radio" id="2-ability" name="ability" value="ability2" />
+									  <label for="2-ability" class="ability" id="ability_star2">&#9733;</label>
+									  <input type="radio" id="1-ability" name="ability" value="ability1" />
+									  <label for="1-ability" class="ability" id="ability_star1">&#9733;</label>
+									</div>
+								  </dd>
+								</dl>
+						  	</div>
+						</div>
+				  </div>
+				  <div class="customer-feedback-list">
+				  	9. Have you had any interaction with our engineering and product specialist teams?
+				  </div>
+				  <div class="customer-feedback-thumb">
+				  	<div class="row">
+					    <div class="col-sm-2">
+					    	<span class="badge badge-pill badge-info" id="open-interaction">Yes</span>
+					    </div>
+					    <div class="col-sm-2">
+					    	<span class="badge badge-pill badge-danger" id="close-interaction">No</span>
+					    </div>
+					</div>
+					<div id="interaction">
+						<div class="customer-experience">
+							How timely was the engineering and product specialists in solving your queries?
+						</div>
+							<div class="customer-feedback-thumb">
+							  	<img class="thumb_5" src="./images/thumb_5.png" alt="thumb_5" width="28px" id="product_support5" />
+							  	<img class="thumb_4" src="./images/thumb_4.png" alt="thumb_4" width="36px" id="product_support4" />
+							  	<img class="thumb_3" src="./images/thumb_3.png" alt="thumb_3" width="36px" id="product_support3" />
+							  	<img class="thumb_2" src="./images/thumb_2.png" alt="thumb_2" width="34px" id="product_support2" />
+							  	<img class="thumb_1" src="./images/thumb_1.png" alt="thumb_1" width="29px" id="product_support1" />
+							 </div>
+						</div>
+				  </div>
+				  <div class="customer-feedback-list">
+				  	10. Please share any additional comments/suggestions:
+				  </div>
+				  <div class="customer-feedback-thumb">
+				  	<div class="form-group">
+					    <label for="exampleFormControlTextarea1">Add suggestion</label>
+					    <textarea class="form-control" id="additional_suggestion" rows="3"></textarea>
+					</div>
+				  </div>
+				  <div class="customer-feedback-list">
+				  	11. If you liked working with us, would you mind sharing a few words of encouragement for our team as a testimonial?
+				  </div>
+				  <div class="customer-feedback-thumb">
+				  	<div class="form-group">
+				  		<label for="exampleFormControlTextarea1">Add few words of encouragement</label>
+					    <textarea class="form-control" id="encouragement" rows="3"></textarea>
+					</div>
+				  </div>
+				  <div class="customer-feedback-list">
+				  	12. Would you like your name & testimonial to be used on our websites & collateral?
+				  </div>
+				  <div class="customer-feedback-thumb">
+				  	<div class="custom-control custom-checkbox">
+					  <input type="checkbox" class="custom-control-input" id="customerCheck" checked>
+					  <label class="custom-control-label" for="customerCheck">Click to disable</label>
+					</div>
+				  </div>
+				  </div>
+				  	<div class="partner-section">
+				  		<div class="customer-feedback">
+				  		Partners & Alliances
+					  </div>
+					  <div class="customer-feedback-list">
+					  	1. How well has Reverie been able to deliver to your expectations from the partnership?
+					  </div>
+					  <div class="customer-feedback-thumb">
+					  	<img class="thumb_5" src="./images/thumb_5.png" alt="thumb_5" width="28px" id="expectations5" />
+					  	<img class="thumb_4" src="./images/thumb_4.png" alt="thumb_4" width="36px" id="expectations4" />
+					  	<img class="thumb_3" src="./images/thumb_3.png" alt="thumb_3" width="36px" id="expectations3" />
+					  	<img class="thumb_2" src="./images/thumb_2.png" alt="thumb_2" width="34px" id="expectations2" />
+					  	<img class="thumb_1" src="./images/thumb_1.png" alt="thumb_1" width="29px" id="expectations1" />
+					  </div>
+					  	<div class="partner-expectation12">
+						  	<div class="form-group">
+							    <label for="exampleFormControlTextarea1">We are sorry to hear this. Please share more details about how we can improve your experience.</label>
+							    <textarea class="form-control expectations" id="text_area12" rows="2"></textarea>
+							</div>
+						</div>
+						<div class="partner-expectation3">
+						  	<div class="form-group">
+							    <label for="exampleFormControlTextarea1">It sounds like we could have done better. Where can we improve?</label>
+							    <textarea class="form-control expectations" id="text_area3" rows="2"></textarea>
+							</div>
+						</div>
+						<div class="partner-expectation45">
+						  	<div class="form-group">
+							    <label for="exampleFormControlTextarea1">Glad to hear this. Which part did you like the most?</label>
+							    <textarea class="form-control expectations" id="text_area45" rows="2"></textarea>
+							</div>
+						</div>
+					  <div class="customer-feedback-list">
+					  	2. How well did our products/solutions help you/your customers reduce the time to launch localized products/services?
+					  </div>
+					  <div class="customer-feedback-thumb">
+					  	<img class="thumb_5" src="./images/thumb_5.png" alt="thumb_5" width="28px" id="reduce_time5" />
+					  	<img class="thumb_4" src="./images/thumb_4.png" alt="thumb_4" width="36px" id="reduce_time4" />
+					  	<img class="thumb_3" src="./images/thumb_3.png" alt="thumb_3" width="36px" id="reduce_time3" />
+					  	<img class="thumb_2" src="./images/thumb_2.png" alt="thumb_2" width="34px" id="reduce_time2" />
+					  	<img class="thumb_1" src="./images/thumb_1.png" alt="thumb_1" width="29px" id="reduce_time1" />
+					  </div>
+					  <div class="customer-feedback-list">
+					  	3. Please rate the effectiveness of our solutions in resolving your client needs & problems.
+					  </div>
+					  <div class="customer-feedback-thumb">
+					  	<div class="effectiveness-rating">
+							  <input type="radio" id="5-effectiveness" name="effectiveness" value="effectiveness5" />
+							  <label for="5-effectiveness" class="effectiveness" id="effectiveness_star5">&#9733;</label>
+							  <input type="radio" id="4-effectiveness" name="effectiveness" value="effectiveness4" />
+							  <label for="4-effectiveness" class="effectiveness" id="effectiveness_star4">&#9733;</label>
+							  <input type="radio" id="3-effectiveness" name="effectiveness" value="effectiveness3" />
+							  <label for="3-effectiveness" class="effectiveness" id="effectiveness_star3">&#9733;</label>
+							  <input type="radio" id="2-effectiveness" name="effectiveness" value="effectiveness2" />
+							  <label for="2-effectiveness" class="effectiveness" id="effectiveness_star2">&#9733;</label>
+							  <input type="radio" id="1-effectiveness" name="effectiveness" value="effectiveness1" />
+							  <label for="1-effectiveness" class="effectiveness" id="effectiveness_star1">&#9733;</label>
+							</div>
+					  </div>
+					  <div class="customer-feedback-list">
+					  	4. Did we support you effectively to engage with clients & provide faster response than your usual sales cycle?
+					  </div>
+					  <div class="customer-feedback-thumb">
+					  	<img class="thumb_5" src="./images/thumb_5.png" alt="thumb_5" width="28px" id="client_support_rate5" />
+					  	<img class="thumb_4" src="./images/thumb_4.png" alt="thumb_4" width="36px" id="client_support_rate4" />
+					  	<img class="thumb_3" src="./images/thumb_3.png" alt="thumb_3" width="36px" id="client_support_rate3" />
+					  	<img class="thumb_2" src="./images/thumb_2.png" alt="thumb_2" width="34px" id="client_support_rate2" />
+					  	<img class="thumb_1" src="./images/thumb_1.png" alt="thumb_1" width="29px" id="client_support_rate1" />
+					  </div>
+					  <div class="customer-feedback-list">
+					  	5. Does our training help you in mapping the right solution for different use cases and effectively engage with your clients?
+					  </div>
+					  <div class="customer-feedback-thumb">
+					  	<img class="thumb_5" src="./images/thumb_5.png" alt="thumb_5" width="28px" id="training_support5" />
+					  	<img class="thumb_4" src="./images/thumb_4.png" alt="thumb_4" width="36px" id="training_support4" />
+					  	<img class="thumb_3" src="./images/thumb_3.png" alt="thumb_3" width="36px" id="training_support3" />
+					  	<img class="thumb_2" src="./images/thumb_2.png" alt="thumb_2" width="34px" id="training_support2" />
+					  	<img class="thumb_1" src="./images/thumb_1.png" alt="thumb_1" width="29px" id="training_support1" />
+					  </div>
+					  <div class="training_help12">
+						  	<div class="form-group">
+							    <label for="exampleFormControlTextarea1">We are sorry to hear this. Please share more details about how we can improve your experience.</label>
+							    <textarea class="form-control expectations" id="help_text_area12" rows="2"></textarea>
+							</div>
+						</div>
+						<div class="training_help3">
+						  	<div class="form-group">
+							    <label for="exampleFormControlTextarea1">It sounds like we could have done better. Where can we improve?</label>
+							    <textarea class="form-control expectations" id="help_text_area3" rows="2"></textarea>
+							</div>
+						</div>
+						<div class="training_help45">
+						  	<div class="form-group">
+							    <label for="exampleFormControlTextarea1">Glad to hear this. Which part did you like the most?</label>
+							    <textarea class="form-control expectations" id="help_text_area45" rows="2"></textarea>
+							</div>
+						</div>
+					  <div class="customer-feedback-list">
+					  	6. Have we provided you relevant collaterals & effective demos to ensure sales effectiveness in building a better sales pipeline?
+					  </div>
+					  <div class="customer-feedback-thumb">
+					  	<img class="thumb_5" src="./images/thumb_5.png" alt="thumb_5" width="28px" id="sales_pipeline5" />
+					  	<img class="thumb_4" src="./images/thumb_4.png" alt="thumb_4" width="36px" id="sales_pipeline4" />
+					  	<img class="thumb_3" src="./images/thumb_3.png" alt="thumb_3" width="36px" id="sales_pipeline3" />
+					  	<img class="thumb_2" src="./images/thumb_2.png" alt="thumb_2" width="34px" id="sales_pipeline2" />
+					  	<img class="thumb_1" src="./images/thumb_1.png" alt="thumb_1" width="29px" id="sales_pipeline1" />
+					  </div>
+					  <div class="customer-feedback-list">
+					  	7. Please rate our engagement with your team in effectively working on opportunities & pipeline
+					  </div>
+					  <div class="customer-feedback-thumb">
+					  	<div class="pipeline-rating">
+							  <input type="radio" id="5-pipeline" name="pipeline" value="pipeline5" />
+							  <label for="5-pipeline" class="pipeline" id="pipeline_star5">&#9733;</label>
+							  <input type="radio" id="4-pipeline" name="pipeline" value="pipeline4" />
+							  <label for="4-pipeline" class="pipeline" id="pipeline_star4">&#9733;</label>
+							  <input type="radio" id="3-pipeline" name="pipeline" value="pipeline3" />
+							  <label for="3-pipeline" class="pipeline" id="pipeline_star3">&#9733;</label>
+							  <input type="radio" id="2-pipeline" name="pipeline" value="pipeline2" />
+							  <label for="2-pipeline" class="pipeline" id="pipeline_star2">&#9733;</label>
+							  <input type="radio" id="1-pipeline" name="pipeline" value="pipeline1" />
+							  <label for="1-pipeline" class="pipeline" id="pipeline_star1">&#9733;</label>
+							</div>
+					  </div>
+					  <div class="customer-feedback-list">
+					  	8. Please rate the Reverie team on the following parameters: 
+					  </div>
+					  <div class="customer-feedback-thumb">
+						    <dl class="row">
+							  <dt class="col-sm-8 rating">1. Insights related to the industry:</dt>
+							  <dd class="col-sm-4">
+							  	<div class="insights-rating">
+								  <input type="radio" id="5-insights" name="insights" value="insights5" />
+								  <label for="5-insights" class="insights" id="insights_star5">&#9733;</label>
+								  <input type="radio" id="4-insights" name="insights" value="insights4" />
+								  <label for="4-insights" class="insights" id="insights_star4">&#9733;</label>
+								  <input type="radio" id="3-insights" name="insights" value="insights3" />
+								  <label for="3-insights" class="insights" id="insights_star3">&#9733;</label>
+								  <input type="radio" id="2-insights" name="insights" value="insights2" />
+								  <label for="2-insights" class="insights" id="insights_star2">&#9733;</label>
+								  <input type="radio" id="1-insights" name="insights" value="insights1" />
+								  <label for="1-insights" class="insights" id="insights_star1">&#9733;</label>
+								</div>
+							  </dd>
+							  <dt class="col-sm-8 rating">2. Responsiveness to your queries:</dt>
+							  <dd class="col-sm-4">
+							  	<div class="queries-rating">
+								  <input type="radio" id="5-queries" name="queries" value="queries5" />
+								  <label for="5-queries" class="queries" id="queries_star5">&#9733;</label>
+								  <input type="radio" id="4-queries" name="queries" value="queries4" />
+								  <label for="4-queries" class="queries" id="queries_star4">&#9733;</label>
+								  <input type="radio" id="3-queries" name="queries" value="queries3" />
+								  <label for="3-queries" class="queries" id="queries_star3">&#9733;</label>
+								  <input type="radio" id="2-queries" name="queries" value="queries2" />
+								  <label for="2-queries" class="queries" id="queries_star2">&#9733;</label>
+								  <input type="radio" id="1-queries" name="queries" value="queries1" />
+								  <label for="1-queries" class="queries" id="queries_star1">&#9733;</label>
+								</div>
+							  </dd>
+							  <dt class="col-sm-8 rating">3. Domain expertise:</dt>
+							  <dd class="col-sm-4">
+							  	<div class="domain-rating">
+								  <input type="radio" id="5-domain" name="domain" value="domain5" />
+								  <label for="5-domain" class="domain" id="domain_star5">&#9733;</label>
+								  <input type="radio" id="4-domain" name="domain" value="domain4" />
+								  <label for="4-domain" class="domain" id="domain_star4">&#9733;</label>
+								  <input type="radio" id="3-domain" name="domain" value="domain3" />
+								  <label for="3-domain" class="domain" id="domain_star3">&#9733;</label>
+								  <input type="radio" id="2-domain" name="domain" value="domain2" />
+								  <label for="2-domain" class="domain" id="domain_star2">&#9733;</label>
+								  <input type="radio" id="1-domain" name="domain" value="domain1" />
+								  <label for="1-domain" class="domain" id="domain_star1">&#9733;</label>
+								</div>
+							  </dd>
+							</dl>
+					  </div>
+					  <div class="customer-feedback-list">
+					  	9. How effective has Reverie’s portfolio been in helping you offer a complete package of products/solutions to your clients?
+					  </div>
+					  <div class="customer-feedback-thumb">
+					  	<img class="thumb_5" src="./images/thumb_5.png" alt="thumb_5" width="28px" id="portfolio_rate5" />
+					  	<img class="thumb_4" src="./images/thumb_4.png" alt="thumb_4" width="36px" id="portfolio_rate4" />
+					  	<img class="thumb_3" src="./images/thumb_3.png" alt="thumb_3" width="36px" id="portfolio_rate3" />
+					  	<img class="thumb_2" src="./images/thumb_2.png" alt="thumb_2" width="34px" id="portfolio_rate2" />
+					  	<img class="thumb_1" src="./images/thumb_1.png" alt="thumb_1" width="29px" id="portfolio_rate1" />
+					  </div>
+					  <div class="customer-feedback-list">
+					  	10. How likely are you to recommend Reverie for any Language localization requirements for your clients?
+					  </div>
+					  <div class="customer-feedback-thumb">
+					  	<img class="thumb_5" src="./images/thumb_5.png" alt="thumb_5" width="28px" id="recommend_rate5" />
+					  	<img class="thumb_4" src="./images/thumb_4.png" alt="thumb_4" width="36px" id="recommend_rate4" />
+					  	<img class="thumb_3" src="./images/thumb_3.png" alt="thumb_3" width="36px" id="recommend_rate3" />
+					  	<img class="thumb_2" src="./images/thumb_2.png" alt="thumb_2" width="34px" id="recommend_rate2" />
+					  	<img class="thumb_1" src="./images/thumb_1.png" alt="thumb_1" width="29px" id="recommend_rate1" />
+					  </div>
+					  <div class="customer-feedback-list">
+					  	11. Would you agree that Reverie offers the most comprehensive and innovative product portfolio related to Indian languages?
+					  </div>
+					  <div class="customer-feedback-thumb">
+					  	<img class="thumb_5" src="./images/thumb_5.png" alt="thumb_5" width="28px" id="offers_rate5" />
+					  	<img class="thumb_4" src="./images/thumb_4.png" alt="thumb_4" width="36px" id="offers_rate4" />
+					  	<img class="thumb_3" src="./images/thumb_3.png" alt="thumb_3" width="36px" id="offers_rate3" />
+					  	<img class="thumb_2" src="./images/thumb_2.png" alt="thumb_2" width="34px" id="offers_rate2" />
+					  	<img class="thumb_1" src="./images/thumb_1.png" alt="thumb_1" width="29px" id="offers_rate1" />
+					  </div>
+					  <div class="customer-feedback-list">
+					  	12. Please share any additional comments/suggestions:
+					  </div>
+					  <div class="customer-feedback-thumb">
+					  	<div class="form-group">
+						    <label for="exampleFormControlTextarea1">Add suggestion</label>
+						    <textarea class="form-control" id="partner_comment" rows="3"></textarea>
+						</div>
+					  </div>
+					  <div class="customer-feedback">
+					  	Testimonial Question
+						  </div>
+						  <div class="customer-feedback-list">
+						  	13. If you liked working with us, would you mind sharing a few words of encouragement for our team as a testimonial?
+						  </div>
+						  <div class="customer-feedback-thumb">
+						  	<div class="form-group">
+						  		<label for="exampleFormControlTextarea1">Add few words of encouragement</label>
+							    <textarea class="form-control" id="partner_words_of_encouragement" rows="3"></textarea>
+							</div>
+						  </div>
+						  <div class="customer-feedback-list">
+						  	14. Would you like your name & testimonial to be used on our websites & collateral?
+						  </div>
+						  <div class="customer-feedback-thumb">
+						  	<div class="custom-control custom-checkbox">
+							  <input type="checkbox" class="custom-control-input" id="partnerChecked" checked>
+							  <label class="custom-control-label" for="partnerChecked">Click to disable</label>
+							</div>
+						  </div>
+						  <div class="customer-feedback-list">
+						  	Our testimonials are our pride. May we publish your name in our website/collateral or would you prefer to remain anonymous
+						  </div>
+				  	</div>
+				  <div class="submit">
+				  	<button type="button" class="btn btn-primary btn-sm" id="btn">Submit Your Query</button>
+				  </div>
+				</form>
+				<div id="msg">
+			      	<pre></pre>
+			    </div>
+			</div>
+	</div>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="./feedback.js"></script>
+<script src="./toastr.js"></script>
+</body>
+</html>

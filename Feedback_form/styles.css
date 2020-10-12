@@ -1,0 +1,673 @@
+.center {
+  margin: auto;
+  width: 70%;
+  /*border: 1px solid #E0E0E0;*/
+  background: #FAFAFA;
+  padding: 10px;
+   min-height: 100vh;
+}
+
+/* Engagement Stars */
+.star-rating {
+  display:flex;
+  flex-direction: row-reverse;
+  font-size:1.5em;
+  justify-content:space-around;
+  text-align:center;
+  width:5em;
+  margin-left: 20px;
+}
+
+.star-rating input {
+  display:none;
+}
+
+.star-rating label {
+  color:#ccc;
+  cursor:pointer;
+}
+
+.star-rating :checked ~ label {
+  color:#f90;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color:#fc0;
+}
+
+#engagement-star1, #engagement-star2, #engagement-star3, #engagement-star4 {
+	margin-right: 10px;
+}
+
+/* Sales BP Stars */
+.sales_bp-rating {
+  display:flex;
+  flex-direction: row-reverse;
+  font-size:1.5em;
+  justify-content:space-around;
+  text-align:center;
+  width:5em;
+}
+
+.sales_bp-rating input {
+  display:none;
+}
+
+.sales_bp-rating label {
+  color:#ccc;
+  cursor:pointer;
+}
+
+.sales_bp-rating :checked ~ label {
+  color:#f90;
+}
+
+.sales_bp-rating label:hover,
+.sales_bp-rating label:hover ~ label {
+  color:#fc0;
+}
+.sales_bp {
+	margin-bottom: -10px;
+}
+
+#sales_bp_star1, #sales_bp_star2, #sales_bp_star3, #sales_bp_star4 {
+	margin-right: 10px;
+}
+
+/* Sales BS Stars */
+.sales_bs-rating {
+  display:flex;
+  flex-direction: row-reverse;
+  font-size:1.5em;
+  justify-content:space-around;
+  text-align:center;
+  width:5em;
+}
+
+.sales_bs-rating input {
+  display:none;
+}
+
+.sales_bs-rating label {
+  color:#ccc;
+  cursor:pointer;
+}
+
+.sales_bs-rating :checked ~ label {
+  color:#f90;
+}
+
+.sales_bs-rating label:hover,
+.sales_bs-rating label:hover ~ label {
+  color:#fc0;
+}
+.sales_bs {
+	margin-bottom: -10px;
+}
+
+#sales_bs_star1, #sales_bs_star2, #sales_bs_star3, #sales_bs_star4 {
+	margin-right: 10px;
+}
+
+/* Sales BR Stars */
+.sales_br-rating {
+  display:flex;
+  flex-direction: row-reverse;
+  font-size:1.5em;
+  justify-content:space-around;
+  text-align:center;
+  width:5em;
+}
+
+.sales_br-rating input {
+  display:none;
+}
+
+.sales_br-rating label {
+  color:#ccc;
+  cursor:pointer;
+}
+
+.sales_br-rating :checked ~ label {
+  color:#f90;
+}
+
+.sales_br-rating label:hover,
+.sales_br-rating label:hover ~ label {
+  color:#fc0;
+}
+.sales_br {
+	margin-bottom: -10px;
+}
+
+#sales_br_star1, #sales_br_star2, #sales_br_star3, #sales_br_star4 {
+	margin-right: 10px;
+}
+
+/* Skill delivery solutions stars */
+.skill_delivery_solution-rating {
+  display:flex;
+  flex-direction: row-reverse;
+  font-size:1.5em;
+  justify-content:space-around;
+  text-align:center;
+  width:5em;
+}
+
+.skill_delivery_solution-rating input {
+  display:none;
+}
+
+.skill_delivery_solution-rating label {
+  color:#ccc;
+  cursor:pointer;
+}
+
+.skill_delivery_solution-rating :checked ~ label {
+  color:#f90;
+}
+
+.skill_delivery_solution-rating label:hover,
+.skill_delivery_solution-rating label:hover ~ label {
+  color:#fc0;
+}
+.skill_delivery_solution {
+	margin-bottom: -10px;
+}
+
+#skill_delivery_solution_star1, #skill_delivery_solution_star2, #skill_delivery_solution_star3, #skill_delivery_solution_star4 {
+	margin-right: 10px;
+}
+
+/* Response to query stars */
+.response_to_query-rating {
+  display:flex;
+  flex-direction: row-reverse;
+  font-size:1.5em;
+  justify-content:space-around;
+  text-align:center;
+  width:5em;
+}
+
+.response_to_query-rating input {
+  display:none;
+}
+
+.response_to_query-rating label {
+  color:#ccc;
+  cursor:pointer;
+}
+
+.response_to_query-rating :checked ~ label {
+  color:#f90;
+}
+
+.response_to_query-rating label:hover,
+.response_to_query-rating label:hover ~ label {
+  color:#fc0;
+}
+.response_to_query {
+	margin-bottom: -10px;
+}
+
+#response_to_query_star1, #response_to_query_star2, #response_to_query_star3, #response_to_query_star4 {
+	margin-right: 10px;
+}
+
+/* Domain expertise stars */
+.domain_expertise-rating {
+  display:flex;
+  flex-direction: row-reverse;
+  font-size:1.5em;
+  justify-content:space-around;
+  text-align:center;
+  width:5em;
+}
+
+.domain_expertise-rating input {
+  display:none;
+}
+
+.domain_expertise-rating label {
+  color:#ccc;
+  cursor:pointer;
+}
+
+.domain_expertise-rating :checked ~ label {
+  color:#f90;
+}
+
+.domain_expertise-rating label:hover,
+.domain_expertise-rating label:hover ~ label {
+  color:#fc0;
+}
+.domain_expertise {
+	margin-bottom: -10px;
+}
+
+#domain_expertise_star1, #domain_expertise_star2, #domain_expertise_star3, #domain_expertise_star4 {
+	margin-right: 10px;
+}
+
+/* Please rate the effectiveness of our solutions in resolving your client needs & problems */
+.effectiveness-rating {
+  display:flex;
+  flex-direction: row-reverse;
+  font-size:1.5em;
+  justify-content:space-around;
+  text-align:center;
+  width:5em;
+}
+
+.effectiveness-rating input {
+  display:none;
+}
+
+.effectiveness-rating label {
+  color:#ccc;
+  cursor:pointer;
+}
+
+.effectiveness-rating :checked ~ label {
+  color:#f90;
+}
+
+.effectiveness-rating label:hover,
+.effectiveness-rating label:hover ~ label {
+  color:#fc0;
+}
+.effectiveness {
+	margin-bottom: -10px;
+}
+
+#effectiveness_star1, #effectiveness_star2, #effectiveness_star3, #effectiveness_star4 {
+	margin-right: 10px;
+}
+
+/* Have we provided you relevant collaterals & effective demos to ensure sales effectiveness in building a better sales pipeline? */
+.pipeline-rating {
+  display:flex;
+  flex-direction: row-reverse;
+  font-size:1.5em;
+  justify-content:space-around;
+  text-align:center;
+  width:5em;
+}
+
+.pipeline-rating input {
+  display:none;
+}
+
+.pipeline-rating label {
+  color:#ccc;
+  cursor:pointer;
+}
+
+.pipeline-rating :checked ~ label {
+  color:#f90;
+}
+
+.pipeline-rating label:hover,
+.pipeline-rating label:hover ~ label {
+  color:#fc0;
+}
+.pipeline {
+	margin-bottom: -10px;
+}
+
+#pipeline_star1, #pipeline_star2, #pipeline_star3, #pipeline_star4 {
+	margin-right: 10px;
+}
+
+/* Insights related to the industry: */
+.insights-rating {
+  display:flex;
+  flex-direction: row-reverse;
+  font-size:1.5em;
+  justify-content:space-around;
+  text-align:center;
+  width:5em;
+}
+
+.insights-rating input {
+  display:none;
+}
+
+.insights-rating label {
+  color:#ccc;
+  cursor:pointer;
+}
+
+.insights-rating :checked ~ label {
+  color:#f90;
+}
+
+.insights-rating label:hover,
+.insights-rating label:hover ~ label {
+  color:#fc0;
+}
+.insights {
+	margin-bottom: -10px;
+}
+
+#insights_star1, #insights_star2, #insights_star3, #insights_star4 {
+	margin-right: 10px;
+}
+
+/* Responsiveness to your queries: */
+.queries-rating {
+  display:flex;
+  flex-direction: row-reverse;
+  font-size:1.5em;
+  justify-content:space-around;
+  text-align:center;
+  width:5em;
+}
+
+.queries-rating input {
+  display:none;
+}
+
+.queries-rating label {
+  color:#ccc;
+  cursor:pointer;
+}
+
+.queries-rating :checked ~ label {
+  color:#f90;
+}
+
+.queries-rating label:hover,
+.queries-rating label:hover ~ label {
+  color:#fc0;
+}
+.queries {
+	margin-bottom: -10px;
+}
+
+#queries_star1, #queries_star2, #queries_star3, #queries_star4 {
+	margin-right: 10px;
+}
+
+/* Domain expertise: */
+.domain-rating {
+  display:flex;
+  flex-direction: row-reverse;
+  font-size:1.5em;
+  justify-content:space-around;
+  text-align:center;
+  width:5em;
+}
+
+.domain-rating input {
+  display:none;
+}
+
+.domain-rating label {
+  color:#ccc;
+  cursor:pointer;
+}
+
+.domain-rating :checked ~ label {
+  color:#f90;
+}
+
+.domain-rating label:hover,
+.domain-rating label:hover ~ label {
+  color:#fc0;
+}
+.domain {
+	margin-bottom: -10px;
+}
+
+#domain_star1, #domain_star2, #domain_star3, #domain_star4 {
+	margin-right: 10px;
+}
+
+/* Quality of translation: */
+.translation_quality-rating {
+  display:flex;
+  flex-direction: row-reverse;
+  font-size:1.5em;
+  justify-content:space-around;
+  text-align:center;
+  width:5em;
+}
+
+.translation_quality-rating input {
+  display:none;
+}
+
+.translation_quality-rating label {
+  color:#ccc;
+  cursor:pointer;
+}
+
+.translation_quality-rating :checked ~ label {
+  color:#f90;
+}
+
+.translation_quality-rating label:hover,
+.translation_quality-rating label:hover ~ label {
+  color:#fc0;
+}
+.translation_quality {
+	margin-bottom: -10px;
+}
+
+#translation_quality_star1, #translation_quality_star2, #translation_quality_star3, #translation_quality_star4 {
+	margin-right: 10px;
+}
+
+/* Time taken for translation: */
+.time_taken-rating {
+  display:flex;
+  flex-direction: row-reverse;
+  font-size:1.5em;
+  justify-content:space-around;
+  text-align:center;
+  width:5em;
+}
+
+.time_taken-rating input {
+  display:none;
+}
+
+.time_taken-rating label {
+  color:#ccc;
+  cursor:pointer;
+}
+
+.time_taken-rating :checked ~ label {
+  color:#f90;
+}
+
+.time_taken-rating label:hover,
+.time_taken-rating label:hover ~ label {
+  color:#fc0;
+}
+.time_taken {
+	margin-bottom: -10px;
+}
+
+#time_taken_star1, #time_taken_star2, #time_taken_star3, #time_taken_star4 {
+	margin-right: 10px;
+}
+
+/* Ability to understand your domain: */
+.ability-rating {
+  display:flex;
+  flex-direction: row-reverse;
+  font-size:1.5em;
+  justify-content:space-around;
+  text-align:center;
+  width:5em;
+}
+
+.ability-rating input {
+  display:none;
+}
+
+.ability-rating label {
+  color:#ccc;
+  cursor:pointer;
+}
+
+.ability-rating :checked ~ label {
+  color:#f90;
+}
+
+.ability-rating label:hover,
+.ability-rating label:hover ~ label {
+  color:#fc0;
+}
+.ability {
+	margin-bottom: -10px;
+}
+
+#ability_star1, #ability_star2, #ability_star3, #ability_star4 {
+	margin-right: 10px;
+}
+
+
+.brand {
+	text-align: center;
+	margin-top: 30px;
+}
+.text1 {
+	padding: 20px;
+	text-align: center;
+	font-size: 16px;
+}
+.motto {
+	text-align: center;
+	margin: 0px 0px 11px;
+	font-size: 13px;
+}
+.reverie-cares {
+	text-align: center;
+	margin: 0px 0px 11px;
+	margin-bottom: 40px;
+}
+.form-content {
+	margin: auto;
+  	width: 90%;
+}
+.feed {
+	margin-top: 30px;
+}
+.customer-feedback-list {
+	margin-top: 30px;
+	margin-left: 30px;
+}
+.customer-feedback-thumb {
+	margin: 10px;
+	margin-left: 50px;
+}
+.customer-expectation12 {
+	margin-top: 20px;
+	margin-left: 50px;
+	display: none;
+}
+.customer-expectation3 {
+	margin-top: 20px;
+	margin-left: 50px;
+	display: none;
+}
+.customer-expectation45 {
+	margin-top: 20px;
+	margin-left: 50px;
+	display: none;
+}
+.partner-expectation12, .partner-expectation3, .partner-expectation45 {
+  margin-top: 20px;
+  margin-left: 50px;
+  display: none;
+}
+.training_help12, .training_help3, .training_help45 {
+  margin-top: 20px;
+  margin-left: 50px;
+  display: none;
+}
+.customer-feedback {
+	margin-top: 60px;
+	font-size: 20px;
+}
+.sales-solution {
+	margin-left: 30px;
+	margin-top: 10px;
+}
+.thumb {
+	margin: 10px;
+}
+.checked {
+	color: #EF9E38;
+}
+.rating {
+	font-weight: unset;
+}
+.submit {
+	margin-top: 20px;
+	text-align: end;
+}
+.customer-section {
+	display: none;
+}
+.partner-section {
+	display: none;
+}
+.customer-experience {
+	margin-top: 20px;
+}
+#customer-experience {
+	display: none;
+}
+
+#close-experience, #open-experience {
+	cursor: pointer;
+}
+#interaction {
+	display: none;
+}
+.thumb_5 {
+    cursor: pointer;
+    margin-right: 15px;
+}
+.thumb_4 {
+	   /*-ms-transform: rotate(300deg);*/
+  	/*transform: rotate(300deg);*/
+    /*filter: opacity(.3) drop-shadow(0 0 0 #616161);*/
+    margin-right: 15px;
+    margin-top: 4px;
+    cursor: pointer;
+}
+.thumb_3 {
+	/*-ms-transform: rotate(270deg);*/
+  	/*transform: rotate(270deg);*/
+    /*filter: opacity(.3) drop-shadow(0 0 0 #616161);*/
+    margin-right: 15px;
+    margin-top: 4px;
+    cursor: pointer;
+}
+.thumb_2 {
+    cursor: pointer;
+    margin-right: 15px;
+    margin-top: 4px;
+}
+.thumb_1 {
+    cursor: pointer;
+    margin-top: 4px;
+}
+.t1 {
+    filter: drop-shadow(0px 0px 8px #1e3799);
+}
+
+
+
+
+
+
+
+
+
