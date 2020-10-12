@@ -10,13 +10,15 @@ const router = express.Router();
 router.post('/', async (req, res) => {
     debugger;
     try {
-        let dbc = await db.dbConn();
+        let dbc = await db1.dbConn();
         let insert  = await dbc.collection('feedback').insertOne(req.body[0]);
-        res.json({success: true, msg: 'data inserted'});
-        
+        res.json({success: true, msg: 'Feedback has been submitted successfully'});        
     } catch (err) {
         console.error(err.message);
-        res.status(500).send('Server error');
+        res.send({
+            success: false,
+            msg: err.message
+        });
     }
 });
 
