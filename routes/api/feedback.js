@@ -9,7 +9,7 @@ const router = express.Router();
 // @access  Public
 router.post('/', async (req, res) => {
     debugger;
-    try {
+    try { 
         let dbc = await db.dbConn();
         let insert  = await dbc.collection('feedback').insertOne(req.body[0]);
         res.json({success: true, msg: 'Feedback has been submitted successfully'});        
