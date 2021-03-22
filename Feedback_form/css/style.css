@@ -1,0 +1,118 @@
+/*style.css*/
+*{
+	transition: all 0.3s;
+}
+.centered {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.question{
+	color: #002b46;
+	font-size: 1.2rem;
+}
+.questionElement{
+	min-width: 60vw;
+	margin: 0 10vw;
+	padding: 50px 0;
+}
+.bottomQuestion{
+	padding-bottom: 0px;
+}
+#questionForm{
+	overflow-y: auto;
+	max-height: 75vh;
+}
+.inputValue{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.04);
+    border: solid transparent;
+    border-width: 0 0 1px 0;
+    display: inline-block;
+    max-width: 100%;
+    min-width: 100%;
+    padding: 7px;
+    position: relative;
+    vertical-align: top;
+    z-index: 1 !important;
+    outline: none;
+    transition: all 0.5s;
+    opacity: 0.7;
+}
+.inputValue:focus{
+	width: 100%;
+    background-color: rgba(0, 0, 0, 0.08);
+    border: solid #ee4137;
+    border-width: 0 0 2px 0;
+    display: inline-block;
+    max-width: 100%;
+    min-width: 100%;
+    padding: 7px;
+    position: relative;
+    vertical-align: top;
+    z-index: 1 !important;
+    transition: all 0.5s;
+    opacity: 1;
+}
+.btn-primary{
+	background-color: #002b46 !important;
+	border-color: #002b46 !important;
+	min-width: 150px;
+}
+.ratingsContainer{
+	display: flex;
+	gap:100px;
+	margin-top: 30px;
+}
+.ratingAnswer{
+	padding:10px 30px;
+	margin:10px;
+}
+.ratingAnswer[type=radio] { 
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* IMAGE STYLES */
+.ratingAnswer[type=radio] + img {
+  cursor: pointer;
+}
+
+/* CHECKED STYLES */
+.ratingAnswer[type=radio]:hover + img {
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 4px;
+}
+.ratingAnswer[type=radio]:checked + img {
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
+.comment-box{
+	width: 60%;
+}
+
+.ratingsContainer label::hover{
+	background-color: rgba(0,0,0,0.2)
+}
+.star-with-question{
+	display: flex;
+	justify-content: space-between;
+}
+.starQuestion{
+	min-width: 350px;
+	font-size: 1em;
+}
+.error_outline{
+  border: 1px solid red;
+  transition: all 0.5s;
+  border-radius: 10px;
+  /* padding: 10px; */
+}
+
+
+
+
+
+

@@ -11,7 +11,7 @@ router.post('/', async (req, res) => {
     debugger;
     try { 
         let dbc = await db.dbConn();
-        let insert  = await dbc.collection('feedback').insertOne(req.body[0]);
+        let insert  = await dbc.collection('feedback').insertOne(req.body);
         res.json({success: true, msg: 'Feedback has been submitted successfully'});        
     } catch (err) {
         console.error(err.message);

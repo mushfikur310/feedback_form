@@ -1,689 +1,1099 @@
-<!doctype html>
-
+<!-- index.html --><!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Reverie Language Technologies Limited</title>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/star.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="./css/fonts/archia-regular-webfont.ttf"> -->
+    <style type="text/css">
+    	@font-face {
+		  font-family: 'Archia';
+		  src: url('./css/fonts/archia-regular-webfont.eot'); /* IE9 Compat Modes */
+		  src: url('./css/fonts/archia-regular-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		       url('./css/fonts/archia-regular-webfont.woff') format('woff'), /* Modern Browsers */
+		       url('./css/fonts/archia-regular-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+		       url('./css/fonts/archia-regular-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+		}
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
-
-  <style type="text/css">
-		button{background-color: darkslategrey;color: white;border: 0;font-size: 18px;font-weight: 500;border-radius: 7px;padding: 10px 10px;cursor: pointer;white-space: nowrap;}
-		#success{background: green;}
-		#error{background: red;}
-		#warning{background: coral;}
-		#info{background: cornflowerblue;}
-		#question{background: grey;}
-	</style>
-
-</head>
-
-<body>
-	<div class="center">
-		<div class="brand">
-			<img src="./images/reverieLogo.svg" alt="reverieinc" width="200px" />
-		</div>
-		<div class="text1">
-			We at Reverie help our customers and partners with the right technologies to engage with their end users in Indian languages. 
-		</div>
-		<div class="motto">
-			<strong>Our motto is</strong> 
-		</div>
-		<div class="motto">
-			‘Language Equality on the Internet™’ 
-		</div>
-		<div class="reverie-cares"><strong>Reverie Cares</strong></div>
-			<div class="form-content">
-				<form>
-				  <div class="form-group row">
-				    <label for="name" class="col-sm-3 col-form-label">Name</label>
-				    <div class="col-sm-7">
-				      <input type="text" class="form-control" id="name" value="">
-				    </div>
-				  </div>
-				  <div class="form-group row">
-				    <label for="email" class="col-sm-3 col-form-label">Official email ID</label>
-				    <div class="col-sm-7">
-				      <input type="email" class="form-control" id="email">
-				    </div>
-				  </div>
-				  <div class="animate__slideOutUp">
-				  	How do you feel about your overall engagement with Reverie?
-				  </div>
-				  <div class="thumb">
-				  	<img class="thumb_5" src="./images/thumb_5.png" alt="thumb_5" width="28px" id="engagement5" />
-				  	<img class="thumb_4" src="./images/thumb_4.png" alt="Thumb_4" width="36px" id="engagement4" />
-				  	<img class="thumb_3" src="./images/thumb_3.png" alt="Thumb_3" width="36px" id="engagement3" />
-				  	<img class="thumb_2" src="./images/thumb_2.png" alt="Thumb_2" width="34px" id="engagement2" />
-				  	<img class="thumb_1" src="./images/thumb_1.png" alt="Thumb_1" width="29px" id="engagement1" />
-				  </div>
-				  <div class="feed">
-				  	Please rate the effectiveness of our Products/solutions in resolving your problems
-				  </div>
-				  <div class="star-rating">
-					  <input type="radio" id="5-stars" name="rating" value="5" />
-					  <label for="5-stars" class="star" id="engagement-star5">&#9733;</label>
-					  <input type="radio" id="4-stars" name="rating" value="4" />
-					  <label for="4-stars" class="star" id="engagement-star4">&#9733;</label>
-					  <input type="radio" id="3-stars" name="rating" value="3" />
-					  <label for="3-stars" class="star" id="engagement-star3">&#9733;</label>
-					  <input type="radio" id="2-stars" name="rating" value="2" />
-					  <label for="2-stars" class="star" id="engagement-star2">&#9733;</label>
-					  <input type="radio" id="1-star" name="rating" value="1" />
-					  <label for="1-star" class="star" id="engagement-star1">&#9733;</label>
+		*{
+		  font-family: Archia !important;
+		}
+		body{
+			background: #f9f7e6;
+		}
+    </style>
+    <title>Reverie Cares</title>
+  </head>
+  <body>
+   	<div class="content my-5">
+   		<div class="centered head">
+   			<div class="logo">
+	   			<img src="./assets/logo.png" width="200px"/>
+	   		</div>
+	   		<div class="page-heading">
+	   			<h2>Reverie Cares</h2>
+	   		</div>
+   		</div>
+   		<div class="centered" id="questionForm">
+   			<div id="intro">
+   				<div class="questionElement">
+					<div class="question">Name</div>
+					<div class="answer">
+						<input type="text" class="inputValue" data-label="name"  data-section="intro">
 					</div>
-				  <div class="feed">
-				  	How likely are you to refer Reverie to other companies looking for language localization requirements?
-				  </div>
-				  <div class="thumb">
-				  	<img class="thumb_5" src="./images/thumb_5.png" alt="thumb_5" width="28px" id="refer_reverie5" />
-				  	<img class="thumb_4" src="./images/thumb_4.png" alt="thumb_4" width="36px" id="refer_reverie4" />
-				  	<img class="thumb_3" src="./images/thumb_3.png" alt="thumb_3" width="36px" id="refer_reverie3" />
-				  	<img class="thumb_2" src="./images/thumb_2.png" alt="thumb_2" width="34px" id="refer_reverie2" />
-				  	<img class="thumb_1" src="./images/thumb_1.png" alt="thumb_1" width="29px" id="refer_reverie1" />
-				  </div>
-				  <div class="feed">
-				  	Would you consider Reverie as one of the Top-3 companies among the language technology businesses in India?
-				  </div>
-				  <div class="thumb">
-				  	<img class="thumb_5" src="./images/thumb_5.png" alt="thumb_5" width="28px" id="top5" />
-				  	<img class="thumb_4" src="./images/thumb_4.png" alt="thumb_4" width="36px" id="top4" />
-				  	<img class="thumb_3" src="./images/thumb_3.png" alt="thumb_3" width="36px" id="top3" />
-				  	<img class="thumb_2" src="./images/thumb_2.png" alt="thumb_2" width="34px" id="top2" />
-				  	<img class="thumb_1" src="./images/thumb_1.png" alt="thumb_1" width="29px" id="top1" />
-				  </div>
-				  <div class="feed">
-				  	Did our sales and pre-sales teams understand your requirements well and suggest appropriate solutions?
-				  </div>
-				  <div class="sales-solution">
-					    <dl class="row">
-						  <dt class="col-sm-8 rating">1. Understanding of your business problem</dt>
-						  <dd class="col-sm-4">
-						  	<div class="sales_bp-rating">
-							  <input type="radio" id="5-sales_bp" name="sales_bp" value="bp5" />
-							  <label for="5-sales_bp" class="sales_bp" id="sales_bp_star5">&#9733;</label>
-							  <input type="radio" id="4-sales_bp" name="sales_bp" value="bp4" />
-							  <label for="4-sales_bp" class="sales_bp" id="sales_bp_star4">&#9733;</label>
-							  <input type="radio" id="3-sales_bp" name="sales_bp" value="bp3" />
-							  <label for="3-sales_bp" class="sales_bp" id="sales_bp_star3">&#9733;</label>
-							  <input type="radio" id="2-sales_bp" name="sales_bp" value="bp2" />
-							  <label for="2-sales_bp" class="sales_bp" id="sales_bp_star2">&#9733;</label>
-							  <input type="radio" id="1-sales_bp" name="sales_bp" value="bp1" />
-							  <label for="1-sales_bp" class="sales_bp" id="sales_bp_star1">&#9733;</label>
-							</div>
-						  </dd>
-						  <dt class="col-sm-8 rating">2. Explanation of the right solution for your business</dt>
-						  <dd class="col-sm-4">
-						  	<div class="sales_bs-rating">
-							  <input type="radio" id="5-sales_bs" name="sales_bs" value="bs5" />
-							  <label for="5-sales_bs" class="sales_bs" id="sales_bs_star5">&#9733;</label>
-							  <input type="radio" id="4-sales_bs" name="sales_bs" value="bs4" />
-							  <label for="4-sales_bs" class="sales_bs" id="sales_bs_star4">&#9733;</label>
-							  <input type="radio" id="3-sales_bs" name="sales_bs" value="bs3" />
-							  <label for="3-sales_bs" class="sales_bs" id="sales_bs_star3">&#9733;</label>
-							  <input type="radio" id="2-sales_bs" name="sales_bs" value="bs2" />
-							  <label for="2-sales_bs" class="sales_bs" id="sales_bs_star2">&#9733;</label>
-							  <input type="radio" id="1-sales_bs" name="sales_bs" value="bs1" />
-							  <label for="1-sales_bs" class="sales_bs" id="sales_bs_star1">&#9733;</label>
-							</div>
-						  </dd>
-						  <dt class="col-sm-8 rating">3. Timely response to your queries</dt>
-						  <dd class="col-sm-4">
-						  	<div class="sales_br-rating">
-							  <input type="radio" id="5-sales_br" name="sales_br" value="br5" />
-							  <label for="5-sales_br" class="sales_br" id="sales_br_star5">&#9733;</label>
-							  <input type="radio" id="4-sales_br" name="sales_br" value="br4" />
-							  <label for="4-sales_br" class="sales_br" id="sales_br_star4">&#9733;</label>
-							  <input type="radio" id="3-sales_br" name="sales_br" value="br3" />
-							  <label for="3-sales_br" class="sales_br" id="sales_br_star3">&#9733;</label>
-							  <input type="radio" id="2-sales_br" name="sales_br" value="br2" />
-							  <label for="2-sales_br" class="sales_br" id="sales_br_star2">&#9733;</label>
-							  <input type="radio" id="1-sales_br" name="sales_br" value="br1" />
-							  <label for="1-sales_br" class="sales_br" id="sales_br_star1">&#9733;</label>
-							</div>
-						  </dd>
-						</dl>
-				  </div>
-				  <div class="feed">
-				  	Please choose your relationship with Reverie:
-				  </div>
-				  <div class="sales-solution">
-				  	<div class="form-check" id="customer">
-					  <input class="form-check-input" type="radio" name="exampleRadios" id="customerRadio" value="option1" checked>
-					  <label class="form-check-label" for="customerRadio">
-					    I am a Reverie customer
-					  </label>
+				</div>
+				<div class="questionElement">
+					<div class="question">E-Mail</div>
+					<div class="answer">
+						<input type="text" class="inputValue" data-label="email" data-section="intro">
 					</div>
-					<div class="form-check" id="partner">
-					  <input class="form-check-input" type="radio" name="exampleRadios" id="partnerRadio" value="option2">
-					  <label class="form-check-label" for="partnerRadio">
-					    I am a Reverie partner
-					  </label>
-					</div>
-					<div class="form-check" id="other">
-					  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-					  <label class="form-check-label" for="exampleRadios3">
-					    Engaged, however could not close procurement
-					  </label>
-					</div>
-				  </div>
-				  <div class="customer-section">
-				  	<div class="customer-feedback">
-				  	Delivery / Customer
-				  </div>
-				  <div class="customer-feedback-list">
-				  	1. How effectively has Reverie been able to deliver to your expectations?
-				  </div>
-				  <div class="customer-feedback-thumb">
-				  	<img class="thumb_5" src="./images/thumb_5.png" alt="thumb_5" id="reverie_delivery_expectation5" width="28px" />
-				  	<img class="thumb_4" src="./images/thumb_4.png" alt="thumb_4" id="reverie_delivery_expectation4" width="36px" />
-				  	<img class="thumb_3" src="./images/thumb_3.png" alt="thumb_3" id="reverie_delivery_expectation3" width="36px" />
-				  	<img class="thumb_2" src="./images/thumb_2.png" alt="thumb_2" id="reverie_delivery_expectation2" width="34px" />
-				  	<img class="thumb_1" src="./images/thumb_1.png" alt="thumb_1" id="reverie_delivery_expectation1" width="29px" />
-				  </div>
-				  	<div class="customer-expectation12">
-					  	<div class="form-group">
-						    <label for="exampleFormControlTextarea1">We are sorry to hear this. Please share more details about how we can improve your experience.</label>
-						    <textarea class="form-control expectations" id="bad-text-area" rows="2"></textarea>
+				</div>
+				<div class="questionElement bottomQuestion" id="role_selector">
+					<div class="question">Your relationship with Reverie</div>
+					<div class="answer">
+						<div class="form-check">
+							<input class="form-check-input inputEl" type="radio" name="exampleRadios" id="exampleRadios1" value="customer" data-label="role" data-section="intro">
+							<label class="form-check-label" for="exampleRadios1">I am a customer of Reverie</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input inputEl" type="radio" name="exampleRadios" id="exampleRadios2" value="partner" data-label="role" data-section="intro">
+							<label class="form-check-label" for="exampleRadios2">I am a partner of Reverie</label>
 						</div>
 					</div>
-					<div class="customer-expectation3">
-					  	<div class="form-group">
-						    <label for="exampleFormControlTextarea1">It sounds like we could have done better. Where can we improve?</label>
-						    <textarea class="form-control expectations" id="good-text-area" rows="2"></textarea>
+				</div>
+				<div class="questionElement">
+					<button type="button" class="btn btn-primary next" id="intro_next">Next</button>
+				</div>
+   			</div>
+   			<div id="partner-step-one">
+   				<div class="questionElement">
+					<div class="question">How well has Reverie been able to deliver as per your expectations from the partnership? </div>
+					<div class="answer">
+						<div class="ratingsContainer">
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="exampleRadios" id="exampleRadios2" value="1" data-label="deliveryExpectationRating" data-section="partnerStepOne">
+								<img src="assets/smiley1.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="exampleRadios" id="exampleRadios2" value="2" data-label="deliveryExpectationRating" data-section="partnerStepOne">
+								<img src="assets/smiley2.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="exampleRadios" id="exampleRadios2" value="3" data-label="deliveryExpectationRating" data-section="partnerStepOne">
+								<img src="assets/smiley3.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="exampleRadios" id="exampleRadios2" value="4" data-label="deliveryExpectationRating" data-section="partnerStepOne">
+								<img src="assets/smiley4.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="exampleRadios" id="exampleRadios2" value="5" data-label="deliveryExpectationRating" data-section="partnerStepOne">
+								<img src="assets/smiley5.png" width="60px">	
+							</label>
+						</div>
+						<div class="centered">
+							<div class="comment-box" data-label="deliveryExpectationRating">
+								<textarea class="inputValue comment inputEl" data-label="deliveryExpectationRating" data-section="partnerStepOne"></textarea>
+							</div>
 						</div>
 					</div>
-					<div class="customer-expectation45">
-					  	<div class="form-group">
-						    <label for="exampleFormControlTextarea1">Glad to hear this. Which part did you like the most?</label>
-						    <textarea class="form-control expectations" id="excellent-text-area" rows="2"></textarea>
+				</div>
+				<div class="questionElement">
+					<div class="question">How well did our products/solutions help you reduce the time to launch your product/service? </div>
+					<div class="answer">
+						<div class="ratingsContainer">
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="aexampleRadios" id="aexampleRadios2" value="1" data-label="reduceTat" data-section="partnerStepOne">
+								<img src="assets/smiley1.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="aexampleRadios" id="aexampleRadios2" value="2" data-label="reduceTat" data-section="partnerStepOne">
+								<img src="assets/smiley2.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="aexampleRadios" id="aexampleRadios2" value="3" data-label="reduceTat" data-section="partnerStepOne">
+								<img src="assets/smiley3.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="aexampleRadios" id="aexampleRadios2" value="4" data-label="reduceTat" data-section="partnerStepOne">
+								<img src="assets/smiley4.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="aexampleRadios" id="aexampleRadios2" value="5" data-label="reduceTat" data-section="partnerStepOne">
+								<img src="assets/smiley5.png" width="60px">	
+							</label>
+						</div>
+						<div class="centered">
+							<div class="comment-box" data-label="reduceTat">
+								<textarea class="inputValue comment inputEl" data-label="reduceTat" data-section="partnerStepOne"></textarea>
+							</div>
 						</div>
 					</div>
-				  <div class="customer-feedback-list">
-				  	2. How well did we help you in reducing the time to launch your localized products/services?
-				  </div>
-				  <div class="customer-feedback-thumb">
-				  	<img class="thumb_5" src="./images/thumb_5.png" alt="thumb_5" width="28px" id="launch5" />
-				  	<img class="thumb_4" src="./images/thumb_4.png" alt="thumb_4" width="36px" id="launch4" />
-				  	<img class="thumb_3" src="./images/thumb_3.png" alt="thumb_3" width="36px" id="launch3" />
-				  	<img class="thumb_2" src="./images/thumb_2.png" alt="thumb_2" width="34px" id="launch2" />
-				  	<img class="thumb_1" src="./images/thumb_1.png" alt="thumb_1" width="29px" id="launch1" />
-				  </div>
-				  <div class="customer-feedback-list">
-				  	3. Has our team been able to deliver the product/solution as per your expectations and within agreed timelines?
-				  </div>
-				  <div class="customer-feedback-thumb">
-				  	<img class="thumb_5" src="./images/thumb_5.png" alt="thumb_5" width="28px" id="onTimeDelivery5" />
-				  	<img class="thumb_4" src="./images/thumb_4.png" alt="thumb_4" width="36px" id="onTimeDelivery4" />
-				  	<img class="thumb_3" src="./images/thumb_3.png" alt="thumb_3" width="36px" id="onTimeDelivery3" />
-				  	<img class="thumb_2" src="./images/thumb_2.png" alt="thumb_2" width="34px" id="onTimeDelivery2" />
-				  	<img class="thumb_1" src="./images/thumb_1.png" alt="thumb_1" width="29px" id="onTimeDelivery1" />
-				  </div>
-				  <div class="customer-feedback-list">
-				  	4. Please rate the Reverie team’s overall performance on the following items:
-				  </div>
-				  <div class="customer-feedback-thumb">
-					    <dl class="row">
-						  <dt class="col-sm-8 rating">1. Skill in delivering solutions:</dt>
-						  <dd class="col-sm-4">
-						  	<div class="skill_delivery_solution-rating">
-							  <input type="radio" id="5-skill_delivery_solution" name="skill_delivery_solution" value="sd5" />
-							  <label for="5-skill_delivery_solution" class="skill_delivery_solution" id="skill_delivery_solution_star5">&#9733;</label>
-							  <input type="radio" id="4-skill_delivery_solution" name="skill_delivery_solution" value="sd4" />
-							  <label for="4-skill_delivery_solution" class="skill_delivery_solution" id="skill_delivery_solution_star4">&#9733;</label>
-							  <input type="radio" id="3-skill_delivery_solution" name="skill_delivery_solution" value="sd3" />
-							  <label for="3-skill_delivery_solution" class="skill_delivery_solution" id="skill_delivery_solution_star3">&#9733;</label>
-							  <input type="radio" id="2-skill_delivery_solution" name="skill_delivery_solution" value="sd2" />
-							  <label for="2-skill_delivery_solution" class="skill_delivery_solution" id="skill_delivery_solution_star2">&#9733;</label>
-							  <input type="radio" id="1-skill_delivery_solution" name="skill_delivery_solution" value="sd1" />
-							  <label for="1-skill_delivery_solution" class="skill_delivery_solution" id="skill_delivery_solution_star1">&#9733;</label>
+				</div>
+				<div class="questionElement">
+					<div class="question">Has the Reverie team been able to deliver the product/solution as per your expectations and within agreed timelines?</div>
+					<div class="answer">
+						<div class="ratingsContainer">
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="bexampleRadios" id="bexampleRadios2" value="1" data-label="deliveryTimeline" data-section="partnerStepOne">
+								<img src="assets/smiley1.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="bexampleRadios" id="bexampleRadios2" value="2" data-label="deliveryTimeline" data-section="partnerStepOne">
+								<img src="assets/smiley2.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="bexampleRadios" id="bexampleRadios2" value="3" data-label="deliveryTimeline" data-section="partnerStepOne">
+								<img src="assets/smiley3.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="bexampleRadios" id="bexampleRadios2" value="4" data-label="deliveryTimeline" data-section="partnerStepOne">
+								<img src="assets/smiley4.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="bexampleRadios" id="bexampleRadios2" value="5" data-label="deliveryTimeline" data-section="partnerStepOne">
+								<img src="assets/smiley5.png" width="60px">	
+							</label>
+						</div>
+						<div class="centered">
+							<div class="comment-box" data-label="deliveryTimeline">
+								<textarea class="inputValue comment inputEl" data-label="deliveryTimeline" data-section="partnerStepOne"></textarea>
 							</div>
-						  </dd>
-						  <dt class="col-sm-8 rating">2. Responsiveness to your queries:</dt>
-						  <dd class="col-sm-4">
-						  	<div class="response_to_query-rating">
-							  <input type="radio" id="5-response_to_query" name="response_to_query" value="rq5" />
-							  <label for="5-response_to_query" class="response_to_query" id="response_to_query_star5">&#9733;</label>
-							  <input type="radio" id="4-response_to_query" name="response_to_query" value="rq4" />
-							  <label for="4-response_to_query" class="response_to_query" id="response_to_query_star4">&#9733;</label>
-							  <input type="radio" id="3-response_to_query" name="response_to_query" value="rq3" />
-							  <label for="3-response_to_query" class="response_to_query" id="response_to_query_star3">&#9733;</label>
-							  <input type="radio" id="2-response_to_query" name="response_to_query" value="rq2" />
-							  <label for="2-response_to_query" class="response_to_query" id="response_to_query_star2">&#9733;</label>
-							  <input type="radio" id="1-response_to_query" name="response_to_query" value="rq1" />
-							  <label for="1-response_to_query" class="response_to_query" id="response_to_query_star1">&#9733;</label>
-							</div>
-						  </dd>
-						  <dt class="col-sm-8 rating">3. Domain expertise:</dt>
-						  <dd class="col-sm-4">
-						  	<div class="domain_expertise-rating">
-							  <input type="radio" id="5-domain_expertise" name="domain_expertise" value="de5" />
-							  <label for="5-domain_expertise" class="domain_expertise" id="domain_expertise_star5">&#9733;</label>
-							  <input type="radio" id="4-domain_expertise" name="domain_expertise" value="de4" />
-							  <label for="4-domain_expertise" class="domain_expertise" id="domain_expertise_star4">&#9733;</label>
-							  <input type="radio" id="3-domain_expertise" name="domain_expertise" value="de3" />
-							  <label for="3-domain_expertise" class="domain_expertise" id="domain_expertise_star3">&#9733;</label>
-							  <input type="radio" id="2-domain_expertise" name="domain_expertise" value="de2" />
-							  <label for="2-domain_expertise" class="domain_expertise" id="domain_expertise_star2">&#9733;</label>
-							  <input type="radio" id="1-domain_expertise" name="domain_expertise" value="de1" />
-							  <label for="1-domain_expertise" class="domain_expertise" id="domain_expertise_star1">&#9733;</label>
-							</div>
-						  </dd>
-						</dl>
-				  </div>
-				  <div class="customer-feedback-list">
-				  	5. Would you consider Reverie as your preferred solution provider for your Localization requirements?
-				  </div>
-				  <div class="customer-feedback-thumb">
-				  	<img class="thumb_5" src="./images/thumb_5.png" alt="thumb_5" width="28px" id="preferred_solution_provider5" />
-				  	<img class="thumb_4" src="./images/thumb_4.png" alt="thumb_4" width="36px" id="preferred_solution_provider4" />
-				  	<img class="thumb_3" src="./images/thumb_3.png" alt="thumb_3" width="36px" id="preferred_solution_provider3" />
-				  	<img class="thumb_2" src="./images/thumb_2.png" alt="thumb_2" width="34px" id="preferred_solution_provider2" />
-				  	<img class="thumb_1" src="./images/thumb_1.png" alt="thumb_1" width="29px" id="preferred_solution_provider1" />
-				  </div>
-				  <div class="customer-feedback-list">
-				  	6. How comprehensive and innovative are Reverie’s products related to Indian languages?
-				  </div>
-				  <div class="customer-feedback-thumb">
-				  	<img class="thumb_5" src="./images/thumb_5.png" alt="thumb_5" width="28px" id="innovative5" />
-				  	<img class="thumb_4" src="./images/thumb_4.png" alt="thumb_3" width="36px" id="innovative4" />
-				  	<img class="thumb_3" src="./images/thumb_3.png" alt="thumb_3" width="36px" id="innovative3" />
-				  	<img class="thumb_2" src="./images/thumb_2.png" alt="thumb_2" width="34px" id="innovative2" />
-				  	<img class="thumb_1" src="./images/thumb_1.png" alt="thumb_1" width="29px" id="innovative1" />
-				  </div>
-				  <div class="customer-feedback-list">
-				  	7. How effectively does Reverie help your business by sharing best practices related to languages?
-				  </div>
-				  <div class="customer-feedback-thumb">
-				  	<img class="thumb_5" src="./images/thumb_5.png" alt="thumb_5" width="28px" id="best_practices5" />
-				  	<img class="thumb_4" src="./images/thumb_4.png" alt="thumb_4" width="36px" id="best_practices4" />
-				  	<img class="thumb_3" src="./images/thumb_3.png" alt="thumb_3" width="36px" id="best_practices3" />
-				  	<img class="thumb_2" src="./images/thumb_2.png" alt="thumb_2" width="34px" id="best_practices2" />
-				  	<img class="thumb_1" src="./images/thumb_1.png" alt="thumb_1" width="29px" id="best_practices1" />
-				  </div>
-				  <div class="customer-feedback-list">
-				  	8. Have you experienced our translation services?
-				  </div>
-				  <div class="customer-feedback-thumb">
-				  	<div class="row">
-					    <div class="col-sm-2">
-					    	<span class="badge badge-pill badge-info" id="open-experience">Yes</span>
-					    </div>
-					    <div class="col-sm-2">
-					    	<span class="badge badge-pill badge-danger" id="close-experience">No</span>
-					    </div>
+						</div>
 					</div>
-						<div id="customer-experience">
-							<div class="customer-experience">
-							Please rate our translations based on:
+				</div>
+				<div class="questionElement">
+					<div class="question">Please rate the effectiveness of our solutions in resolving your client needs & problems.</div>
+					<div class="answer">
+						<div class="ratingsContainer">
+							<div class="centered">
+								<div class="starRating" data-label="solutionEffectiveness" data-section="partnerStepOne"></div>
 							</div>
-							<div class="customer-feedback-thumb">
-							    <dl class="row">
-								  <dt class="col-sm-8 rating">a. Quality of translation:</dt>
-								  <dd class="col-sm-4">
-								  	<div class="translation_quality-rating">
-									  <input type="radio" id="5-translation_quality" name="translation_quality" value="translation_quality5" />
-									  <label for="5-translation_quality" class="translation_quality" id="translation_quality_star5">&#9733;</label>
-									  <input type="radio" id="4-translation_quality" name="translation_quality" value="translation_quality4" />
-									  <label for="4-translation_quality" class="translation_quality" id="translation_quality_star4">&#9733;</label>
-									  <input type="radio" id="3-translation_quality" name="translation_quality" value="translation_quality3" />
-									  <label for="3-translation_quality" class="translation_quality" id="translation_quality_star3">&#9733;</label>
-									  <input type="radio" id="2-translation_quality" name="translation_quality" value="translation_quality2" />
-									  <label for="2-translation_quality" class="translation_quality" id="translation_quality_star2">&#9733;</label>
-									  <input type="radio" id="1-translation_quality" name="translation_quality" value="translation_quality1" />
-									  <label for="1-translation_quality" class="translation_quality" id="translation_quality_star1">&#9733;</label>
-									</div>
-								  </dd>
-								  <dt class="col-sm-8 rating">b. Time taken for translation:</dt>
-								  <dd class="col-sm-4">
-								  	<div class="time_taken-rating">
-									  <input type="radio" id="5-time_taken" name="time_taken" value="time_taken5" />
-									  <label for="5-time_taken" class="time_taken" id="time_taken_star5">&#9733;</label>
-									  <input type="radio" id="4-time_taken" name="time_taken" value="time_taken4" />
-									  <label for="4-time_taken" class="time_taken" id="time_taken_star4">&#9733;</label>
-									  <input type="radio" id="3-time_taken" name="time_taken" value="time_taken3" />
-									  <label for="3-time_taken" class="time_taken" id="time_taken_star3">&#9733;</label>
-									  <input type="radio" id="2-time_taken" name="time_taken" value="time_taken2" />
-									  <label for="2-time_taken" class="time_taken" id="time_taken_star2">&#9733;</label>
-									  <input type="radio" id="1-time_taken" name="time_taken" value="time_taken1" />
-									  <label for="1-time_taken" class="time_taken" id="time_taken_star1">&#9733;</label>
-									</div>
-								  </dd>
-								  <dt class="col-sm-8 rating">c. Ability to understand your domain:</dt>
-								  <dd class="col-sm-4">
-								  	<div class="ability-rating">
-									  <input type="radio" id="5-ability" name="ability" value="ability5" />
-									  <label for="5-ability" class="ability" id="ability_star5">&#9733;</label>
-									  <input type="radio" id="4-ability" name="ability" value="ability4" />
-									  <label for="4-ability" class="ability" id="ability_star4">&#9733;</label>
-									  <input type="radio" id="3-ability" name="ability" value="ability3" />
-									  <label for="3-ability" class="ability" id="ability_star3">&#9733;</label>
-									  <input type="radio" id="2-ability" name="ability" value="ability2" />
-									  <label for="2-ability" class="ability" id="ability_star2">&#9733;</label>
-									  <input type="radio" id="1-ability" name="ability" value="ability1" />
-									  <label for="1-ability" class="ability" id="ability_star1">&#9733;</label>
-									</div>
-								  </dd>
-								</dl>
-						  	</div>
 						</div>
-				  </div>
-				  <div class="customer-feedback-list">
-				  	9. Have you had any interaction with our engineering and product specialist teams?
-				  </div>
-				  <div class="customer-feedback-thumb">
-				  	<div class="row">
-					    <div class="col-sm-2">
-					    	<span class="badge badge-pill badge-info" id="open-interaction">Yes</span>
-					    </div>
-					    <div class="col-sm-2">
-					    	<span class="badge badge-pill badge-danger" id="close-interaction">No</span>
-					    </div>
 					</div>
-					<div id="interaction">
-						<div class="customer-experience">
-							How timely was the engineering and product specialists in solving your queries?
+				</div>
+				<div class="questionElement">
+					<div class="question">Did we support you effectively to engage with clients & provide a faster response than your usual sales cycle?</div>
+					<div class="answer">
+						<div class="ratingsContainer">
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="cexampleRadios" id="cexampleRadios2" value="1" data-label="partnerClientResponse" data-section="partnerStepOne">
+								<img src="assets/smiley1.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="cexampleRadios" id="cexampleRadios2" value="2" data-label="partnerClientResponse" data-section="partnerStepOne">
+								<img src="assets/smiley2.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="cexampleRadios" id="cexampleRadios2" value="3" data-label="partnerClientResponse" data-section="partnerStepOne">
+								<img src="assets/smiley3.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="cexampleRadios" id="cexampleRadios2" value="4" data-label="partnerClientResponse" data-section="partnerStepOne">
+								<img src="assets/smiley4.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="cexampleRadios" id="cexampleRadios2" value="5" data-label="partnerClientResponse" data-section="partnerStepOne">
+								<img src="assets/smiley5.png" width="60px">	
+							</label>
 						</div>
-							<div class="customer-feedback-thumb">
-							  	<img class="thumb_5" src="./images/thumb_5.png" alt="thumb_5" width="28px" id="product_support5" />
-							  	<img class="thumb_4" src="./images/thumb_4.png" alt="thumb_4" width="36px" id="product_support4" />
-							  	<img class="thumb_3" src="./images/thumb_3.png" alt="thumb_3" width="36px" id="product_support3" />
-							  	<img class="thumb_2" src="./images/thumb_2.png" alt="thumb_2" width="34px" id="product_support2" />
-							  	<img class="thumb_1" src="./images/thumb_1.png" alt="thumb_1" width="29px" id="product_support1" />
-							 </div>
+						<div class="centered">
+							<div class="comment-box" data-label="partnerClientResponse">
+								<textarea class="inputValue comment inputEl" data-label="partnerClientResponse" data-section="partnerStepOne"></textarea>
+							</div>
 						</div>
-				  </div>
-				  <div class="customer-feedback-list">
-				  	10. Please share any additional comments/suggestions:
-				  </div>
-				  <div class="customer-feedback-thumb">
-				  	<div class="form-group">
-					    <label for="exampleFormControlTextarea1">Add suggestion</label>
-					    <textarea class="form-control" id="additional_suggestion" rows="3"></textarea>
 					</div>
-				  </div>
-				  <div class="customer-feedback-list">
-				  	11. If you liked working with us, would you mind sharing a few words of encouragement for our team as a testimonial?
-				  </div>
-				  <div class="customer-feedback-thumb">
-				  	<div class="form-group">
-				  		<label for="exampleFormControlTextarea1">Add few words of encouragement</label>
-					    <textarea class="form-control" id="encouragement" rows="3"></textarea>
+				</div>
+				<div class="questionElement">
+					<div class="question">Does our training help you in mapping the right solution for different use cases?</div>
+					<div class="answer">
+						<div class="ratingsContainer">
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="dexampleRadios" id="dexampleRadios2" value="1" data-label="trainingBenefits" data-section="partnerStepOne">
+								<img src="assets/smiley1.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="dexampleRadios" id="dexampleRadios2" value="2" data-label="trainingBenefits" data-section="partnerStepOne">
+								<img src="assets/smiley2.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="dexampleRadios" id="dexampleRadios2" value="3" data-label="trainingBenefits" data-section="partnerStepOne">
+								<img src="assets/smiley3.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="dexampleRadios" id="dexampleRadios2" value="4" data-label="trainingBenefits" data-section="partnerStepOne">
+								<img src="assets/smiley4.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="dexampleRadios" id="dexampleRadios2" value="5" data-label="trainingBenefits" data-section="partnerStepOne">
+								<img src="assets/smiley5.png" width="60px">	
+							</label>
+						</div>
+						<div class="centered">
+							<div class="comment-box" data-label="trainingBenefits">
+								<textarea class="inputValue comment inputEl" data-label="trainingBenefits" data-section="partnerStepOne"></textarea>
+							</div>
+						</div>
 					</div>
-				  </div>
-				  <div class="customer-feedback-list">
-				  	12. Would you like your name & testimonial to be used on our websites & collateral?
-				  </div>
-				  <div class="customer-feedback-thumb">
-				  	<div class="custom-control custom-checkbox">
-					  <input type="checkbox" class="custom-control-input" id="customerCheck" checked>
-					  <label class="custom-control-label" for="customerCheck">Click to disable</label>
+				</div>
+				<div class="questionElement">
+					<div class="question">Have we provided you relevant collaterals & effective demos to ensure sales effectiveness in building a better sales pipeline?</div>
+					<div class="answer">
+						<div class="ratingsContainer">
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="eexampleRadios" id="eexampleRadios2" value="1" data-label="collateralRelevance" data-section="partnerStepOne">
+								<img src="assets/smiley1.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="eexampleRadios" id="eexampleRadios2" value="2" data-label="collateralRelevance" data-section="partnerStepOne">
+								<img src="assets/smiley2.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="eexampleRadios" id="eexampleRadios2" value="3" data-label="collateralRelevance" data-section="partnerStepOne">
+								<img src="assets/smiley3.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="eexampleRadios" id="eexampleRadios2" value="4" data-label="collateralRelevance" data-section="partnerStepOne">
+								<img src="assets/smiley4.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="eexampleRadios" id="eexampleRadios2" value="5" data-label="collateralRelevance" data-section="partnerStepOne">
+								<img src="assets/smiley5.png" width="60px">	
+							</label>
+						</div>
+						<div class="centered">
+							<div class="comment-box" data-label="collateralRelevance">
+								<textarea class="inputValue comment inputEl" data-label="collateralRelevance" data-section="partnerStepOne"></textarea>
+							</div>
+						</div>
 					</div>
-				  </div>
-				  </div>
-				  	<div class="partner-section">
-				  		<div class="customer-feedback">
-				  		Partners & Alliances
-					  </div>
-					  <div class="customer-feedback-list">
-					  	1. How well has Reverie been able to deliver to your expectations from the partnership?
-					  </div>
-					  <div class="customer-feedback-thumb">
-					  	<img class="thumb_5" src="./images/thumb_5.png" alt="thumb_5" width="28px" id="expectations5" />
-					  	<img class="thumb_4" src="./images/thumb_4.png" alt="thumb_4" width="36px" id="expectations4" />
-					  	<img class="thumb_3" src="./images/thumb_3.png" alt="thumb_3" width="36px" id="expectations3" />
-					  	<img class="thumb_2" src="./images/thumb_2.png" alt="thumb_2" width="34px" id="expectations2" />
-					  	<img class="thumb_1" src="./images/thumb_1.png" alt="thumb_1" width="29px" id="expectations1" />
-					  </div>
-					  	<div class="partner-expectation12">
-						  	<div class="form-group">
-							    <label for="exampleFormControlTextarea1">We are sorry to hear this. Please share more details about how we can improve your experience.</label>
-							    <textarea class="form-control expectations" id="text_area12" rows="2"></textarea>
+				</div>
+				<div class="questionElement">
+					<div class="question">Please rate our engagement with your team in effectively working on opportunities & pipeline.</div>
+					<div class="answer">
+						<div class="ratingsContainer">
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="fexampleRadios" id="fexampleRadios2" value="1" data-label="engagementWithPartnerTeam" data-section="partnerStepOne">
+								<img src="assets/smiley1.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="fexampleRadios" id="fexampleRadios2" value="2" data-label="engagementWithPartnerTeam" data-section="partnerStepOne">
+								<img src="assets/smiley2.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="fexampleRadios" id="fexampleRadios2" value="3" data-label="engagementWithPartnerTeam" data-section="partnerStepOne">
+								<img src="assets/smiley3.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="fexampleRadios" id="fexampleRadios2" value="4" data-label="engagementWithPartnerTeam" data-section="partnerStepOne">
+								<img src="assets/smiley4.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="fexampleRadios" id="fexampleRadios2" value="5" data-label="engagementWithPartnerTeam" data-section="partnerStepOne">
+								<img src="assets/smiley5.png" width="60px">	
+							</label>
+						</div>
+						<div class="centered">
+							<div class="comment-box" data-label="engagementWithPartnerTeam">
+								<textarea class="inputValue comment inputEl" data-label="engagementWithPartnerTeam" data-section="partnerStepOne"></textarea>
 							</div>
 						</div>
-						<div class="partner-expectation3">
-						  	<div class="form-group">
-							    <label for="exampleFormControlTextarea1">It sounds like we could have done better. Where can we improve?</label>
-							    <textarea class="form-control expectations" id="text_area3" rows="2"></textarea>
+					</div>
+				</div>
+				<div class="questionElement">
+					<div class="question">Please rate the Reverie team on the following parameters: </div>
+					<div class="answer">
+						<div class="ratingsContainer ">
+							<div class="star-with-question">
+								<div class="starQuestion">Insights related to the Industry</div>
+								<div class="starRating" data-label="industryInsights" data-section="partnerStepOne"></div>
 							</div>
 						</div>
-						<div class="partner-expectation45">
-						  	<div class="form-group">
-							    <label for="exampleFormControlTextarea1">Glad to hear this. Which part did you like the most?</label>
-							    <textarea class="form-control expectations" id="text_area45" rows="2"></textarea>
+					</div>
+					<div class="answer">
+						<div class="ratingsContainer ">
+							<div class="star-with-question">
+								<div class="starQuestion">Responsiveness to your queries</div>
+								<div class="starRating" data-label="queryResponsiveness" data-section="partnerStepOne"></div>
 							</div>
 						</div>
-					  <div class="customer-feedback-list">
-					  	2. How well did our products/solutions help you/your customers reduce the time to launch localized products/services?
-					  </div>
-					  <div class="customer-feedback-thumb">
-					  	<img class="thumb_5" src="./images/thumb_5.png" alt="thumb_5" width="28px" id="reduce_time5" />
-					  	<img class="thumb_4" src="./images/thumb_4.png" alt="thumb_4" width="36px" id="reduce_time4" />
-					  	<img class="thumb_3" src="./images/thumb_3.png" alt="thumb_3" width="36px" id="reduce_time3" />
-					  	<img class="thumb_2" src="./images/thumb_2.png" alt="thumb_2" width="34px" id="reduce_time2" />
-					  	<img class="thumb_1" src="./images/thumb_1.png" alt="thumb_1" width="29px" id="reduce_time1" />
-					  </div>
-					  <div class="customer-feedback-list">
-					  	3. Please rate the effectiveness of our solutions in resolving your client needs & problems.
-					  </div>
-					  <div class="customer-feedback-thumb">
-					  	<div class="effectiveness-rating">
-							  <input type="radio" id="5-effectiveness" name="effectiveness" value="effectiveness5" />
-							  <label for="5-effectiveness" class="effectiveness" id="effectiveness_star5">&#9733;</label>
-							  <input type="radio" id="4-effectiveness" name="effectiveness" value="effectiveness4" />
-							  <label for="4-effectiveness" class="effectiveness" id="effectiveness_star4">&#9733;</label>
-							  <input type="radio" id="3-effectiveness" name="effectiveness" value="effectiveness3" />
-							  <label for="3-effectiveness" class="effectiveness" id="effectiveness_star3">&#9733;</label>
-							  <input type="radio" id="2-effectiveness" name="effectiveness" value="effectiveness2" />
-							  <label for="2-effectiveness" class="effectiveness" id="effectiveness_star2">&#9733;</label>
-							  <input type="radio" id="1-effectiveness" name="effectiveness" value="effectiveness1" />
-							  <label for="1-effectiveness" class="effectiveness" id="effectiveness_star1">&#9733;</label>
-							</div>
-					  </div>
-					  <div class="customer-feedback-list">
-					  	4. Did we support you effectively to engage with clients & provide faster response than your usual sales cycle?
-					  </div>
-					  <div class="customer-feedback-thumb">
-					  	<img class="thumb_5" src="./images/thumb_5.png" alt="thumb_5" width="28px" id="client_support_rate5" />
-					  	<img class="thumb_4" src="./images/thumb_4.png" alt="thumb_4" width="36px" id="client_support_rate4" />
-					  	<img class="thumb_3" src="./images/thumb_3.png" alt="thumb_3" width="36px" id="client_support_rate3" />
-					  	<img class="thumb_2" src="./images/thumb_2.png" alt="thumb_2" width="34px" id="client_support_rate2" />
-					  	<img class="thumb_1" src="./images/thumb_1.png" alt="thumb_1" width="29px" id="client_support_rate1" />
-					  </div>
-					  <div class="customer-feedback-list">
-					  	5. Does our training help you in mapping the right solution for different use cases and effectively engage with your clients?
-					  </div>
-					  <div class="customer-feedback-thumb">
-					  	<img class="thumb_5" src="./images/thumb_5.png" alt="thumb_5" width="28px" id="training_support5" />
-					  	<img class="thumb_4" src="./images/thumb_4.png" alt="thumb_4" width="36px" id="training_support4" />
-					  	<img class="thumb_3" src="./images/thumb_3.png" alt="thumb_3" width="36px" id="training_support3" />
-					  	<img class="thumb_2" src="./images/thumb_2.png" alt="thumb_2" width="34px" id="training_support2" />
-					  	<img class="thumb_1" src="./images/thumb_1.png" alt="thumb_1" width="29px" id="training_support1" />
-					  </div>
-					  <div class="training_help12">
-						  	<div class="form-group">
-							    <label for="exampleFormControlTextarea1">We are sorry to hear this. Please share more details about how we can improve your experience.</label>
-							    <textarea class="form-control expectations" id="help_text_area12" rows="2"></textarea>
+					</div>
+					<div class="answer">
+						<div class="ratingsContainer ">
+							<div class="star-with-question">
+								<div class="starQuestion">Domain Expertise</div>
+								<div class="starRating" data-label="domainExpertise" data-section="partnerStepOne"></div>
 							</div>
 						</div>
-						<div class="training_help3">
-						  	<div class="form-group">
-							    <label for="exampleFormControlTextarea1">It sounds like we could have done better. Where can we improve?</label>
-							    <textarea class="form-control expectations" id="help_text_area3" rows="2"></textarea>
+					</div>
+				</div>
+				<div class="questionElement">
+					<div class="question">How effective has Reverie’s portfolio been in helping you offer a complete package of products/solutions to your clients?</div>
+					<div class="answer">
+						<div class="ratingsContainer">
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="gexampleRadios" id="gexampleRadios2" value="1" data-label="reveriePortfolioEffectiveness" data-section="partnerStepOne">
+								<img src="assets/smiley1.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="gexampleRadios" id="gexampleRadios2" value="2" data-label="reveriePortfolioEffectiveness" data-section="partnerStepOne">
+								<img src="assets/smiley2.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="gexampleRadios" id="gexampleRadios2" value="3" data-label="reveriePortfolioEffectiveness" data-section="partnerStepOne">
+								<img src="assets/smiley3.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="gexampleRadios" id="gexampleRadios2" value="4" data-label="reveriePortfolioEffectiveness" data-section="partnerStepOne">
+								<img src="assets/smiley4.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="gexampleRadios" id="gexampleRadios2" value="5" data-label="reveriePortfolioEffectiveness" data-section="partnerStepOne">
+								<img src="assets/smiley5.png" width="60px">	
+							</label>
+						</div>
+						<div class="centered">
+							<div class="comment-box" data-label="reveriePortfolioEffectiveness">
+								<textarea class="inputValue comment inputEl" data-label="reveriePortfolioEffectiveness" data-section="partnerStepOne"></textarea>
 							</div>
 						</div>
-						<div class="training_help45">
-						  	<div class="form-group">
-							    <label for="exampleFormControlTextarea1">Glad to hear this. Which part did you like the most?</label>
-							    <textarea class="form-control expectations" id="help_text_area45" rows="2"></textarea>
+					</div>
+				</div>
+				<div class="questionElement">
+					<div class="question">Please rate the positive impact our products/solutions have on your clients?</div>
+					<div class="answer">
+						<div class="ratingsContainer">
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="hexampleRadios" id="hexampleRadios2" value="1" data-label="productPositiveImpact" data-section="partnerStepOne">
+								<img src="assets/smiley1.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="hexampleRadios" id="hexampleRadios2" value="2" data-label="productPositiveImpact" data-section="partnerStepOne">
+								<img src="assets/smiley2.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="hexampleRadios" id="hexampleRadios2" value="3" data-label="productPositiveImpact" data-section="partnerStepOne">
+								<img src="assets/smiley3.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="hexampleRadios" id="hexampleRadios2" value="4" data-label="productPositiveImpact" data-section="partnerStepOne">
+								<img src="assets/smiley4.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="hexampleRadios" id="hexampleRadios2" value="5" data-label="productPositiveImpact" data-section="partnerStepOne">
+								<img src="assets/smiley5.png" width="60px">	
+							</label>
+						</div>
+						<div class="centered">
+							<div class="comment-box" data-label="productPositiveImpact">
+								<textarea class="inputValue comment inputEl" data-label="productPositiveImpact" data-section="partnerStepOne"></textarea>
 							</div>
 						</div>
-					  <div class="customer-feedback-list">
-					  	6. Have we provided you relevant collaterals & effective demos to ensure sales effectiveness in building a better sales pipeline?
-					  </div>
-					  <div class="customer-feedback-thumb">
-					  	<img class="thumb_5" src="./images/thumb_5.png" alt="thumb_5" width="28px" id="sales_pipeline5" />
-					  	<img class="thumb_4" src="./images/thumb_4.png" alt="thumb_4" width="36px" id="sales_pipeline4" />
-					  	<img class="thumb_3" src="./images/thumb_3.png" alt="thumb_3" width="36px" id="sales_pipeline3" />
-					  	<img class="thumb_2" src="./images/thumb_2.png" alt="thumb_2" width="34px" id="sales_pipeline2" />
-					  	<img class="thumb_1" src="./images/thumb_1.png" alt="thumb_1" width="29px" id="sales_pipeline1" />
-					  </div>
-					  <div class="customer-feedback-list">
-					  	7. Please rate our engagement with your team in effectively working on opportunities & pipeline
-					  </div>
-					  <div class="customer-feedback-thumb">
-					  	<div class="pipeline-rating">
-							  <input type="radio" id="5-pipeline" name="pipeline" value="pipeline5" />
-							  <label for="5-pipeline" class="pipeline" id="pipeline_star5">&#9733;</label>
-							  <input type="radio" id="4-pipeline" name="pipeline" value="pipeline4" />
-							  <label for="4-pipeline" class="pipeline" id="pipeline_star4">&#9733;</label>
-							  <input type="radio" id="3-pipeline" name="pipeline" value="pipeline3" />
-							  <label for="3-pipeline" class="pipeline" id="pipeline_star3">&#9733;</label>
-							  <input type="radio" id="2-pipeline" name="pipeline" value="pipeline2" />
-							  <label for="2-pipeline" class="pipeline" id="pipeline_star2">&#9733;</label>
-							  <input type="radio" id="1-pipeline" name="pipeline" value="pipeline1" />
-							  <label for="1-pipeline" class="pipeline" id="pipeline_star1">&#9733;</label>
+					</div>
+				</div>
+				<div class="questionElement">
+					<div class="question">Has Reverie helped you in opening new doors and increasing your pipeline?</div>
+					<div class="answer">
+						<div class="ratingsContainer">
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="iexampleRadios" id="iexampleRadios2" value="1" data-label="reveriePartnerPipelineContribution" data-section="partnerStepOne">
+								<img src="assets/smiley1.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="iexampleRadios" id="iexampleRadios2" value="2" data-label="reveriePartnerPipelineContribution" data-section="partnerStepOne">
+								<img src="assets/smiley2.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="iexampleRadios" id="iexampleRadios2" value="3" data-label="reveriePartnerPipelineContribution" data-section="partnerStepOne">
+								<img src="assets/smiley3.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="iexampleRadios" id="iexampleRadios2" value="4" data-label="reveriePartnerPipelineContribution" data-section="partnerStepOne">
+								<img src="assets/smiley4.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="iexampleRadios" id="iexampleRadios2" value="5" data-label="reveriePartnerPipelineContribution" data-section="partnerStepOne">
+								<img src="assets/smiley5.png" width="60px">	
+							</label>
+						</div>
+						<div class="centered">
+							<div class="comment-box" data-label="reveriePartnerPipelineContribution">
+								<textarea class="inputValue comment inputEl" data-label="reveriePartnerPipelineContribution" data-section="partnerStepOne"></textarea>
 							</div>
-					  </div>
-					  <div class="customer-feedback-list">
-					  	8. Please rate the Reverie team on the following parameters: 
-					  </div>
-					  <div class="customer-feedback-thumb">
-						    <dl class="row">
-							  <dt class="col-sm-8 rating">1. Insights related to the industry:</dt>
-							  <dd class="col-sm-4">
-							  	<div class="insights-rating">
-								  <input type="radio" id="5-insights" name="insights" value="insights5" />
-								  <label for="5-insights" class="insights" id="insights_star5">&#9733;</label>
-								  <input type="radio" id="4-insights" name="insights" value="insights4" />
-								  <label for="4-insights" class="insights" id="insights_star4">&#9733;</label>
-								  <input type="radio" id="3-insights" name="insights" value="insights3" />
-								  <label for="3-insights" class="insights" id="insights_star3">&#9733;</label>
-								  <input type="radio" id="2-insights" name="insights" value="insights2" />
-								  <label for="2-insights" class="insights" id="insights_star2">&#9733;</label>
-								  <input type="radio" id="1-insights" name="insights" value="insights1" />
-								  <label for="1-insights" class="insights" id="insights_star1">&#9733;</label>
+						</div>
+					</div>
+				</div>
+				<div class="questionElement">
+					<div class="question">Did our partnership and support help you in winning projects ?</div>
+					<div class="answer">
+						<div class="ratingsContainer">
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="jexampleRadios" id="jexampleRadios2" value="1" data-label="partnerSupportWinProject" data-section="partnerStepOne">
+								<img src="assets/smiley1.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="jexampleRadios" id="jexampleRadios2" value="2" data-label="partnerSupportWinProject" data-section="partnerStepOne">
+								<img src="assets/smiley2.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="jexampleRadios" id="jexampleRadios2" value="3" data-label="partnerSupportWinProject" data-section="partnerStepOne">
+								<img src="assets/smiley3.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="jexampleRadios" id="jexampleRadios2" value="4" data-label="partnerSupportWinProject" data-section="partnerStepOne">
+								<img src="assets/smiley4.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="jexampleRadios" id="jexampleRadios2" value="5" data-label="partnerSupportWinProject" data-section="partnerStepOne">
+								<img src="assets/smiley5.png" width="60px">	
+							</label>
+						</div>
+						<div class="centered">
+							<div class="comment-box" data-label="partnerSupportWinProject">
+								<textarea class="inputValue comment inputEl" data-label="partnerSupportWinProject" data-section="partnerStepOne"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="questionElement">
+					<div class="question">How likely are you to choose Reverie for any Language localization requirements for your clients? </div>
+					<div class="answer">
+						<div class="ratingsContainer">
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="kexampleRadios" id="kexampleRadios2" value="1" data-label="chooseReverieForRequirements" data-section="partnerStepOne">
+								<img src="assets/smiley1.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="kexampleRadios" id="kexampleRadios2" value="2" data-label="chooseReverieForRequirements" data-section="partnerStepOne">
+								<img src="assets/smiley2.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="kexampleRadios" id="kexampleRadios2" value="3" data-label="chooseReverieForRequirements" data-section="partnerStepOne">
+								<img src="assets/smiley3.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="kexampleRadios" id="kexampleRadios2" value="4" data-label="chooseReverieForRequirements" data-section="partnerStepOne">
+								<img src="assets/smiley4.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="kexampleRadios" id="kexampleRadios2" value="5" data-label="chooseReverieForRequirements" data-section="partnerStepOne">
+								<img src="assets/smiley5.png" width="60px">	
+							</label>
+						</div>
+						<div class="centered">
+							<div class="comment-box" data-label="chooseReverieForRequirements">
+								<textarea class="inputValue comment inputEl" data-label="chooseReverieForRequirements" data-section="partnerStepOne"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="questionElement">
+					<div class="question">Do you agree that Reverie offers the most comprehensive and innovative product portfolio related to Indian languages ?</div>
+					<div class="answer">
+						<div class="ratingsContainer">
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="lexampleRadios" id="lexampleRadios2" value="1" data-label="comprehensiveAndInnovative" data-section="partnerStepOne">
+								<img src="assets/smiley1.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="lexampleRadios" id="lexampleRadios2" value="2" data-label="comprehensiveAndInnovative" data-section="partnerStepOne">
+								<img src="assets/smiley2.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="lexampleRadios" id="lexampleRadios2" value="3" data-label="comprehensiveAndInnovative" data-section="partnerStepOne">
+								<img src="assets/smiley3.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="lexampleRadios" id="lexampleRadios2" value="4" data-label="comprehensiveAndInnovative" data-section="partnerStepOne">
+								<img src="assets/smiley4.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="lexampleRadios" id="lexampleRadios2" value="5" data-label="comprehensiveAndInnovative" data-section="partnerStepOne">
+								<img src="assets/smiley5.png" width="60px">	
+							</label>
+						</div>
+						<div class="centered">
+							<div class="comment-box" data-label="comprehensiveAndInnovative">
+								<textarea class="inputValue comment inputEl" data-label="comprehensiveAndInnovative" data-section="partnerStepOne"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="questionElement">
+					<div class="question">Would you consider Reverie as one of the Top-3 companies among language technology businesses in India?</div>
+					<div class="answer">
+						<div class="ratingsContainer">
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="exampleRadios" id="exampleRadios2" value="1" data-label="topThree" data-section="partnerStepOne">
+								<img src="assets/smiley1.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="exampleRadios" id="exampleRadios2" value="2" data-label="topThree" data-section="partnerStepOne">
+								<img src="assets/smiley2.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="exampleRadios" id="exampleRadios2" value="3" data-label="topThree" data-section="partnerStepOne">
+								<img src="assets/smiley3.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="exampleRadios" id="exampleRadios2" value="4" data-label="topThree" data-section="partnerStepOne">
+								<img src="assets/smiley4.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="exampleRadios" id="exampleRadios2" value="5" data-label="topThree" data-section="partnerStepOne">
+								<img src="assets/smiley5.png" width="60px">	
+							</label>
+						</div>
+						<div class="centered">
+							<div class="comment-box" data-label="topThree">
+								<textarea class="inputValue comment" data-label="topThree" data-section="partnerStepOne"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="questionElement bottomQuestion">
+					<div class="question">Please share any additional comments/suggestions:</div>
+					<div class="answer">
+						<textarea type="text" class="inputValue" data-label="additionalComment" data-section="partnerStepOne"></textarea>
+					</div>
+				</div>
+				<div class="questionElement">
+					<button type="button" class="btn btn-primary back" id="back" data-section="partnerStepOne"><i class="fa fa-arrow-left"></i></button>
+					<button type="button" class="btn btn-primary done" id="intro_next">Done</button>
+				</div>
+   			</div>
+   			<div id="customer-step-one">
+   				<div class="questionElement">
+					<div class="question">How effectively has Reverie been able to deliver as per your expectations? </div>
+					<div class="answer">
+						<div class="ratingsContainer">
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio" id="customerRadio2" value="1" data-label="deliveryExpectationRating" data-section="customerStepOne">
+								<img src="assets/smiley1.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio" id="customerRadio2" value="2" data-label="deliveryExpectationRating" data-section="customerStepOne">
+								<img src="assets/smiley2.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio" id="customerRadio2" value="3" data-label="deliveryExpectationRating" data-section="customerStepOne">
+								<img src="assets/smiley3.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio" id="customerRadio2" value="4" data-label="deliveryExpectationRating" data-section="customerStepOne">
+								<img src="assets/smiley4.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio" id="customerRadio2" value="5" data-label="deliveryExpectationRating" data-section="customerStepOne">
+								<img src="assets/smiley5.png" width="60px">	
+							</label>
+						</div>
+						<div class="centered">
+							<div class="comment-box" data-label="deliveryExpectationRating">
+								<textarea class="inputValue comment inputEl" data-label="deliveryExpectationRating" data-section="customerStepOne"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="questionElement">
+					<div class="question">How well did we help you in reducing the time to launch your product/service?</div>
+					<div class="answer">
+						<div class="ratingsContainer">
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio1" id="customerRadio12" value="1" data-label="gtmTat" data-section="customerStepOne">
+								<img src="assets/smiley1.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio1" id="customerRadio12" value="2" data-label="gtmTat" data-section="customerStepOne">
+								<img src="assets/smiley2.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio1" id="customerRadio12" value="3" data-label="gtmTat" data-section="customerStepOne">
+								<img src="assets/smiley3.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio1" id="customerRadio12" value="4" data-label="gtmTat" data-section="customerStepOne">
+								<img src="assets/smiley4.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio1" id="customerRadio12" value="5" data-label="gtmTat" data-section="customerStepOne">
+								<img src="assets/smiley5.png" width="60px">	
+							</label>
+						</div>
+						<div class="centered">
+							<div class="comment-box" data-label="gtmTat">
+								<textarea class="inputValue comment inputEl" data-label="gtmTat" data-section="customerStepOne"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="questionElement">
+					<div class="question">Has our team been able to deliver the product/solution as per your expectations and within agreed timelines?</div>
+					<div class="answer">
+						<div class="ratingsContainer">
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio2" id="customerRadio22" value="1" data-label="deliveryTimeline" data-section="customerStepOne">
+								<img src="assets/smiley1.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio2" id="customerRadio22" value="2" data-label="deliveryTimeline" data-section="customerStepOne">
+								<img src="assets/smiley2.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio2" id="customerRadio22" value="3" data-label="deliveryTimeline" data-section="customerStepOne">
+								<img src="assets/smiley3.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio2" id="customerRadio22" value="4" data-label="deliveryTimeline" data-section="customerStepOne">
+								<img src="assets/smiley4.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio2" id="customerRadio22" value="5" data-label="deliveryTimeline" data-section="customerStepOne">
+								<img src="assets/smiley5.png" width="60px">	
+							</label>
+						</div>
+						<div class="centered">
+							<div class="comment-box" data-label="deliveryTimeline">
+								<textarea class="inputValue comment inputEl" data-label="deliveryTimeline" data-section="customerStepOne"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="questionElement">
+					<div class="question">Please rate the effectiveness of our solutions in resolving your problems.</div>
+					<div class="answer">
+						<div class="ratingsContainer">
+							<div class="centered">
+								<div class="starRating" data-label="solutionEffectiveness" data-section="customerStepOne"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="questionElement">
+					<div class="question">Please rate the Reverie team's overall performance on the following items:</div>
+					<div class="answer">
+						<div class="ratingsContainer ">
+							<div class="star-with-question">
+								<div class="starQuestion">Skill in delivering solutions</div>
+								<div class="starRating" data-label="deliverySkills" data-section="customerStepOne"></div>
+							</div>
+						</div>
+					</div>
+					<div class="answer">
+						<div class="ratingsContainer ">
+							<div class="star-with-question">
+								<div class="starQuestion">Responsiveness to your queries</div>
+								<div class="starRating" data-label="queryResponsiveness" data-section="customerStepOne"></div>
+							</div>
+						</div>
+					</div>
+					<div class="answer">
+						<div class="ratingsContainer ">
+							<div class="star-with-question">
+								<div class="starQuestion">Domain Expertise</div>
+								<div class="starRating" data-label="domainExpertise" data-section="customerStepOne"></div>
+							</div>
+						</div>
+					</div>
+					<div class="answer">
+						<div class="ratingsContainer ">
+							<div class="star-with-question">
+								<div class="starQuestion">Effectiveness of the engagement</div>
+								<div class="starRating" data-label="engagementEffectiveness" data-section="customerStepOne"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="questionElement">
+					<div class="question">How well did Reverie help you achieve your initial objectives for the localization project?   </div>
+					<div class="answer">
+						<div class="ratingsContainer">
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio3" id="customerRadio32" value="1" data-label="achieveInitialObjective" data-section="customerStepOne">
+								<img src="assets/smiley1.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio3" id="customerRadio32" value="2" data-label="achieveInitialObjective" data-section="customerStepOne">
+								<img src="assets/smiley2.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio3" id="customerRadio32" value="3" data-label="achieveInitialObjective" data-section="customerStepOne">
+								<img src="assets/smiley3.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio3" id="customerRadio32" value="4" data-label="achieveInitialObjective" data-section="customerStepOne">
+								<img src="assets/smiley4.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio3" id="customerRadio32" value="5" data-label="achieveInitialObjective" data-section="customerStepOne">
+								<img src="assets/smiley5.png" width="60px">	
+							</label>
+						</div>
+						<div class="centered">
+							<div class="comment-box" data-label="achieveInitialObjective">
+								<textarea class="inputValue comment inputEl" data-label="achieveInitialObjective" data-section="customerStepOne"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="questionElement">
+					<div class="question">How likely are you to refer Reverie to other companies looking for language localization requirements?</div>
+					<div class="answer">
+						<div class="ratingsContainer">
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio4" id="customerRadio42" value="1" data-label="referalPossibility" data-section="customerStepOne">
+								<img src="assets/smiley1.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio4" id="customerRadio42" value="2" data-label="referalPossibility" data-section="customerStepOne">
+								<img src="assets/smiley2.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio4" id="customerRadio42" value="3" data-label="referalPossibility" data-section="customerStepOne">
+								<img src="assets/smiley3.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio4" id="customerRadio42" value="4" data-label="referalPossibility" data-section="customerStepOne">
+								<img src="assets/smiley4.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio4" id="customerRadio42" value="5" data-label="referalPossibility" data-section="customerStepOne">
+								<img src="assets/smiley5.png" width="60px">	
+							</label>
+						</div>
+						<div class="centered">
+							<div class="comment-box" data-label="referalPossibility">
+								<textarea class="inputValue comment inputEl" data-label="referalPossibility" data-section="customerStepOne"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="questionElement">
+					<div class="question">Do you agree that you will approach Reverie first for solutions to your critical problems related to language localization?</div>
+					<div class="answer">
+						<div class="ratingsContainer">
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio5" id="customerRadio52" value="1" data-label="problemApproachability" data-section="customerStepOne">
+								<img src="assets/smiley1.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio5" id="customerRadio52" value="2" data-label="problemApproachability" data-section="customerStepOne">
+								<img src="assets/smiley2.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio5" id="customerRadio52" value="3" data-label="problemApproachability" data-section="customerStepOne">
+								<img src="assets/smiley3.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio5" id="customerRadio52" value="4" data-label="problemApproachability" data-section="customerStepOne">
+								<img src="assets/smiley4.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio5" id="customerRadio52" value="5" data-label="problemApproachability" data-section="customerStepOne">
+								<img src="assets/smiley5.png" width="60px">	
+							</label>
+						</div>
+						<div class="centered">
+							<div class="comment-box" data-label="problemApproachability">
+								<textarea class="inputValue comment inputEl" data-label="problemApproachability" data-section="customerStepOne"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="questionElement">
+					<div class="question">How comprehensive and innovative are Reverie’s products related to Indian languages?</div>
+					<div class="answer">
+						<div class="ratingsContainer">
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio6" id="customerRadio62" value="1" data-label="innovativeness" data-section="customerStepOne">
+								<img src="assets/smiley1.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio6" id="customerRadio62" value="2" data-label="innovativeness" data-section="customerStepOne">
+								<img src="assets/smiley2.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio6" id="customerRadio62" value="3" data-label="innovativeness" data-section="customerStepOne">
+								<img src="assets/smiley3.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio6" id="customerRadio62" value="4" data-label="innovativeness" data-section="customerStepOne">
+								<img src="assets/smiley4.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio6" id="customerRadio62" value="5" data-label="innovativeness" data-section="customerStepOne">
+								<img src="assets/smiley5.png" width="60px">	
+							</label>
+						</div>
+						<div class="centered">
+							<div class="comment-box" data-label="innovativeness">
+								<textarea class="inputValue comment inputEl" data-label="innovativeness" data-section="customerStepOne"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="questionElement">
+					<div class="question">How effectively does Reverie help your business by sharing best practices related to languages?</div>
+					<div class="answer">
+						<div class="ratingsContainer">
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio7" id="customerRadio72" value="1" data-label="languageBestPractice" data-section="customerStepOne">
+								<img src="assets/smiley1.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio7" id="customerRadio72" value="2" data-label="languageBestPractice" data-section="customerStepOne">
+								<img src="assets/smiley2.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio7" id="customerRadio72" value="3" data-label="languageBestPractice" data-section="customerStepOne">
+								<img src="assets/smiley3.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio7" id="customerRadio72" value="4" data-label="languageBestPractice" data-section="customerStepOne">
+								<img src="assets/smiley4.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio7" id="customerRadio72" value="5" data-label="languageBestPractice" data-section="customerStepOne">
+								<img src="assets/smiley5.png" width="60px">	
+							</label>
+						</div>
+						<div class="centered">
+							<div class="comment-box" data-label="languageBestPractice">
+								<textarea class="inputValue comment inputEl" data-label="languageBestPractice" data-section="customerStepOne"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="questionElement bottomQuestion">
+					<div class="question">Would you consider Reverie as one of the Top-3 companies among the language technology businesses in India?</div>
+					<div class="answer">
+						<div class="ratingsContainer">
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio8" id="customerRadio82" value="1" data-label="topThree" data-section="customerStepOne">
+								<img src="assets/smiley1.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio8" id="customerRadio82" value="2" data-label="topThree" data-section="customerStepOne">
+								<img src="assets/smiley2.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio8" id="customerRadio82" value="3" data-label="topThree" data-section="customerStepOne">
+								<img src="assets/smiley3.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio8" id="customerRadio82" value="4" data-label="topThree" data-section="customerStepOne">
+								<img src="assets/smiley4.png" width="60px">	
+							</label>
+							<label>
+								<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadio8" id="customerRadio82" value="5" data-label="topThree" data-section="customerStepOne">
+								<img src="assets/smiley5.png" width="60px">	
+							</label>
+						</div>
+						<div class="centered">
+							<div class="comment-box" data-label="topThree">
+								<textarea class="inputValue comment inputEl" data-label="topThree" data-section="customerStepOne"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="questionElement">
+					<button type="button" class="btn btn-primary back" id="back" data-section="customerStepOne"><i class="fa fa-arrow-left"></i></button>
+					<button type="button" class="btn btn-primary next" id="customer_step_one_next">Next</button>
+				</div>
+   			</div>
+   			<div id="customer-step-two">
+   				<div class="questionElement">
+					<div class="question">Have you experienced our translation services?</div>
+					<div class="answer">
+						<div class="form-check">
+							<input class="form-check-input inputEl" type="radio" name="customerRadiosa" id="customerRadiosa1" value="yes" data-label="tsInteract" data-section="customerStepTwo">
+							<label class="form-check-label" for="customerRadiosa1">Yes</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input inputEl" type="radio" name="customerRadiosa" id="customerRadiosa2" value="no" data-label="tsInteract" data-section="customerStepTwo">
+							<label class="form-check-label" for="customerRadiosa2">No</label>
+						</div>
+					</div>
+				</div>
+				<div id="follow-customer-step-two">
+					<div class="questionElement bottomQuestion">
+						<div class="question">Please rate our translations based on:</div>
+						<div class="answer">
+							<div class="ratingsContainer ">
+								<div class="star-with-question">
+									<div class="starQuestion">Quality of translation:</div>
+									<div class="starRating" data-label="deliverySkills" data-section="customerStepTwo"></div>
 								</div>
-							  </dd>
-							  <dt class="col-sm-8 rating">2. Responsiveness to your queries:</dt>
-							  <dd class="col-sm-4">
-							  	<div class="queries-rating">
-								  <input type="radio" id="5-queries" name="queries" value="queries5" />
-								  <label for="5-queries" class="queries" id="queries_star5">&#9733;</label>
-								  <input type="radio" id="4-queries" name="queries" value="queries4" />
-								  <label for="4-queries" class="queries" id="queries_star4">&#9733;</label>
-								  <input type="radio" id="3-queries" name="queries" value="queries3" />
-								  <label for="3-queries" class="queries" id="queries_star3">&#9733;</label>
-								  <input type="radio" id="2-queries" name="queries" value="queries2" />
-								  <label for="2-queries" class="queries" id="queries_star2">&#9733;</label>
-								  <input type="radio" id="1-queries" name="queries" value="queries1" />
-								  <label for="1-queries" class="queries" id="queries_star1">&#9733;</label>
-								</div>
-							  </dd>
-							  <dt class="col-sm-8 rating">3. Domain expertise:</dt>
-							  <dd class="col-sm-4">
-							  	<div class="domain-rating">
-								  <input type="radio" id="5-domain" name="domain" value="domain5" />
-								  <label for="5-domain" class="domain" id="domain_star5">&#9733;</label>
-								  <input type="radio" id="4-domain" name="domain" value="domain4" />
-								  <label for="4-domain" class="domain" id="domain_star4">&#9733;</label>
-								  <input type="radio" id="3-domain" name="domain" value="domain3" />
-								  <label for="3-domain" class="domain" id="domain_star3">&#9733;</label>
-								  <input type="radio" id="2-domain" name="domain" value="domain2" />
-								  <label for="2-domain" class="domain" id="domain_star2">&#9733;</label>
-								  <input type="radio" id="1-domain" name="domain" value="domain1" />
-								  <label for="1-domain" class="domain" id="domain_star1">&#9733;</label>
-								</div>
-							  </dd>
-							</dl>
-					  </div>
-					  <div class="customer-feedback-list">
-					  	9. How effective has Reverie’s portfolio been in helping you offer a complete package of products/solutions to your clients?
-					  </div>
-					  <div class="customer-feedback-thumb">
-					  	<img class="thumb_5" src="./images/thumb_5.png" alt="thumb_5" width="28px" id="portfolio_rate5" />
-					  	<img class="thumb_4" src="./images/thumb_4.png" alt="thumb_4" width="36px" id="portfolio_rate4" />
-					  	<img class="thumb_3" src="./images/thumb_3.png" alt="thumb_3" width="36px" id="portfolio_rate3" />
-					  	<img class="thumb_2" src="./images/thumb_2.png" alt="thumb_2" width="34px" id="portfolio_rate2" />
-					  	<img class="thumb_1" src="./images/thumb_1.png" alt="thumb_1" width="29px" id="portfolio_rate1" />
-					  </div>
-					  <div class="customer-feedback-list">
-					  	10. How likely are you to recommend Reverie for any Language localization requirements for your clients?
-					  </div>
-					  <div class="customer-feedback-thumb">
-					  	<img class="thumb_5" src="./images/thumb_5.png" alt="thumb_5" width="28px" id="recommend_rate5" />
-					  	<img class="thumb_4" src="./images/thumb_4.png" alt="thumb_4" width="36px" id="recommend_rate4" />
-					  	<img class="thumb_3" src="./images/thumb_3.png" alt="thumb_3" width="36px" id="recommend_rate3" />
-					  	<img class="thumb_2" src="./images/thumb_2.png" alt="thumb_2" width="34px" id="recommend_rate2" />
-					  	<img class="thumb_1" src="./images/thumb_1.png" alt="thumb_1" width="29px" id="recommend_rate1" />
-					  </div>
-					  <div class="customer-feedback-list">
-					  	11. Would you agree that Reverie offers the most comprehensive and innovative product portfolio related to Indian languages?
-					  </div>
-					  <div class="customer-feedback-thumb">
-					  	<img class="thumb_5" src="./images/thumb_5.png" alt="thumb_5" width="28px" id="offers_rate5" />
-					  	<img class="thumb_4" src="./images/thumb_4.png" alt="thumb_4" width="36px" id="offers_rate4" />
-					  	<img class="thumb_3" src="./images/thumb_3.png" alt="thumb_3" width="36px" id="offers_rate3" />
-					  	<img class="thumb_2" src="./images/thumb_2.png" alt="thumb_2" width="34px" id="offers_rate2" />
-					  	<img class="thumb_1" src="./images/thumb_1.png" alt="thumb_1" width="29px" id="offers_rate1" />
-					  </div>
-					  <div class="customer-feedback-list">
-					  	12. Please share any additional comments/suggestions:
-					  </div>
-					  <div class="customer-feedback-thumb">
-					  	<div class="form-group">
-						    <label for="exampleFormControlTextarea1">Add suggestion</label>
-						    <textarea class="form-control" id="partner_comment" rows="3"></textarea>
+							</div>
 						</div>
-					  </div>
-					  <div class="customer-feedback">
-					  	Testimonial Question
-						  </div>
-						  <div class="customer-feedback-list">
-						  	13. If you liked working with us, would you mind sharing a few words of encouragement for our team as a testimonial?
-						  </div>
-						  <div class="customer-feedback-thumb">
-						  	<div class="form-group">
-						  		<label for="exampleFormControlTextarea1">Add few words of encouragement</label>
-							    <textarea class="form-control" id="partner_words_of_encouragement" rows="3"></textarea>
+						<div class="answer">
+							<div class="ratingsContainer ">
+								<div class="star-with-question">
+									<div class="starQuestion">Time taken for translation:</div>
+									<div class="starRating" data-label="queryResponsiveness" data-section="customerStepTwo"></div>
+								</div>
 							</div>
-						  </div>
-						  <div class="customer-feedback-list">
-						  	14. Would you like your name & testimonial to be used on our websites & collateral?
-						  </div>
-						  <div class="customer-feedback-thumb">
-						  	<div class="custom-control custom-checkbox">
-							  <input type="checkbox" class="custom-control-input" id="partnerChecked" checked>
-							  <label class="custom-control-label" for="partnerChecked">Click to disable</label>
+						</div>
+					</div>
+					<div class="questionElement">
+						<button type="button" class="btn btn-primary back" id="back" data-section="customerStepTwo"><i class="fa fa-arrow-left"></i></button>
+						<button type="button" class="btn btn-primary next" id="customer_step_two_next">Next</button>
+					</div>
+				</div>
+				<div class="questionElement" id="noTsInteract">
+					<button type="button" class="btn btn-primary back" id="back" data-section="customerStepTwo"><i class="fa fa-arrow-left"></i></button>
+					<button type="button" class="btn btn-primary done" id="customer_step_two_next">Next</button>
+				</div>
+   			</div>
+   			<div id="customer-step-three">
+   				<div class="questionElement bottomQuestion">
+					<div class="question">Have you had any interaction with our technical team? </div>
+					<div class="answer">
+						<div class="form-check">
+							<input class="form-check-input inputEl" type="radio" name="customerRadiosb" id="customerRadiosb1" value="yes" data-label="techInteract" data-section="customerStepThree">
+							<label class="form-check-label" for="customerRadiosb1">Yes</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input inputEl" type="radio" name="customerRadiosb" id="customerRadiosb2" value="no" data-label="techInteract" data-section="customerStepThree">
+							<label class="form-check-label" for="customerRadiosb2">No</label>
+						</div>
+					</div>
+				</div>
+				<div id="follow-customer-step-three">
+					<div class="questionElement">
+						<div class="question">How effective was our technical team in solving your problem? </div>
+						<div class="answer">
+							<div class="ratingsContainer">
+								<label>
+									<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadioc" id="customerRadioc2" value="1" data-label="techTeamEffectiveness" data-section="customerStepThree">
+									<img src="assets/smiley1.png" width="60px">	
+								</label>
+								<label>
+									<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadioc" id="customerRadioc2" value="2" data-label="techTeamEffectiveness" data-section="customerStepThree">
+									<img src="assets/smiley2.png" width="60px">	
+								</label>
+								<label>
+									<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadioc" id="customerRadioc2" value="3" data-label="techTeamEffectiveness" data-section="customerStepThree">
+									<img src="assets/smiley3.png" width="60px">	
+								</label>
+								<label>
+									<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadioc" id="customerRadioc2" value="4" data-label="techTeamEffectiveness" data-section="customerStepThree">
+									<img src="assets/smiley4.png" width="60px">	
+								</label>
+								<label>
+									<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadioc" id="customerRadioc2" value="5" data-label="techTeamEffectiveness" data-section="customerStepThree">
+									<img src="assets/smiley5.png" width="60px">	
+								</label>
 							</div>
-						  </div>
-						  <div class="customer-feedback-list">
-						  	Our testimonials are our pride. May we publish your name in our website/collateral or would you prefer to remain anonymous
-						  </div>
-				  	</div>
-				  <div class="submit">
-				  	<button type="button" class="btn btn-primary btn-sm" id="btn">Submit Your Query</button>
-				  </div>
-				</form>
-				<!-- <div id="msg">
-			      	<pre></pre>
-			    </div> -->
-			</div>
-	</div>
-<script src="config.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-<script src="./feedback.js"></script>
-<script src="./toastr.js"></script>
-</body>
+							<div class="centered">
+								<div class="comment-box" data-label="techTeamEffectiveness">
+									<textarea class="inputValue comment inputEl" data-label="techTeamEffectiveness" data-section="customerStepThree"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="questionElement">
+						<div class="question">How efficient was the technical team in solving your queries on time?</div>
+						<div class="answer">
+							<div class="ratingsContainer">
+								<label>
+									<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadiod" id="customerRadiod2" value="1" data-label="techTeamQueryResolve" data-section="customerStepThree">
+									<img src="assets/smiley1.png" width="60px">	
+								</label>
+								<label>
+									<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadiod" id="customerRadiod2" value="2" data-label="techTeamQueryResolve" data-section="customerStepThree">
+									<img src="assets/smiley2.png" width="60px">	
+								</label>
+								<label>
+									<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadiod" id="customerRadiod2" value="3" data-label="techTeamQueryResolve" data-section="customerStepThree">
+									<img src="assets/smiley3.png" width="60px">	
+								</label>
+								<label>
+									<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadiod" id="customerRadiod2" value="4" data-label="techTeamQueryResolve" data-section="customerStepThree">
+									<img src="assets/smiley4.png" width="60px">	
+								</label>
+								<label>
+									<input class="form-check-input inputEl ratingAnswer" type="radio" name="customerRadiod" id="customerRadiod2" value="5" data-label="techTeamQueryResolve" data-section="customerStepThree">
+									<img src="assets/smiley5.png" width="60px">	
+								</label>
+							</div>
+							<div class="centered">
+								<div class="comment-box" data-label="techTeamQueryResolve">
+									<textarea class="inputValue comment inputEl" data-label="techTeamQueryResolve" data-section="customerStepThree"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="questionElement">
+						<div class="question">Please rate the Technical team's overall performance on the following items:</div>
+						<div class="answer">
+							<div class="ratingsContainer ">
+								<div class="star-with-question">
+									<div class="starQuestion">Technical Skills in delivering the solution</div>
+									<div class="starRating" data-label="techSkillsForDelivery" data-section="customerStepThree"></div>
+								</div>
+							</div>
+						</div>
+						<div class="answer">
+							<div class="ratingsContainer ">
+								<div class="star-with-question">
+									<div class="starQuestion">Subject Matter Expertise</div>
+									<div class="starRating" data-label="sme" data-section="customerStepThree"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="questionElement bottomQuestion">
+						<div class="question">Please share any additional comments/suggestions:</div>
+						<div class="answer">
+							<textarea type="text" class="inputValue" data-label="additionalComment" data-section="customerStepThree"></textarea>
+						</div>
+					</div>
+					<div class="questionElement">
+						<button type="button" class="btn btn-primary back" id="back" data-section="customerStepThree"><i class="fa fa-arrow-left"></i></button>
+						<button type="button" class="btn btn-primary done" id="customer_step_three_done">Done</button>
+					</div>
+				</div>
+				<div class="questionElement" id="noTechInteract">
+					<button type="button" class="btn btn-primary back" id="back" data-section="customerStepThree"><i class="fa fa-arrow-left"></i></button>
+					<button type="button" class="btn btn-primary next" id="customer_step_three_next">Next</button>
+				</div>
+   			</div>
+   			<div id="thankYou" class="questionElement">
+   				<div class="centered">
+   					<p>
+   						Thank you for completing this survey. We appreciate your time and your feedback.
+   					</p>
+   					<p>
+   						Warm regards,
+   					</p>
+   					<p>
+   						Team Reverie
+   					</p>
+   				</div>
+   			</div>
+   		</div>
+   	</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+	  src="https://code.jquery.com/jquery-3.5.1.min.js"
+	  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+	  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./js/star.js"></script>
+    <script type="text/javascript" src="./js/questions.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" data-auto-replace-svg="nest"></script>
+
+
+  </body>
 </html>
