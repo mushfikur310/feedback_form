@@ -275,7 +275,8 @@ let formStructure = {
 			hiForm("thankYou");
 			console.log(formStructure)
 			var settings = {
-				"url": "http://localhost:5000/feedback_api/feedback",
+				// "url": "http://localhost:5000/feedback_api/feedback",
+				"url": `${API_URL}/feedback_api/feedback`,
 				"method": "POST",
 				"headers": {
 					"Content-Type": "application/json"
