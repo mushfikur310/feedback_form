@@ -14,11 +14,9 @@
 .questionElement{
 	min-width: 60vw;
 	margin: 0 10vw;
-	padding: 50px 0;
+	padding: 50px 10px;
 }
-.bottomQuestion{
-	padding-bottom: 0px;
-}
+
 #questionForm{
 	overflow-y: auto;
 	max-height: 75vh;
@@ -103,15 +101,21 @@
 .starQuestion{
 	min-width: 350px;
 	font-size: 1em;
+  display: flex;
+  align-items: center;
 }
 .error_outline{
-  border: 1px solid red;
+  border-left: 1px solid red;
   transition: all 0.5s;
-  border-radius: 10px;
-  /* padding: 10px; */
+  margin-right: 10px;
+  /* border-radius: 10px; */
+  padding: 0 10px;
 }
 
-
+.error{
+  background: rgba(255,0,0,0.1);
+  border-left: 5px solid red;
+}
 
 
 

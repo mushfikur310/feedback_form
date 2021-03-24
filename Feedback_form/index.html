@@ -43,16 +43,16 @@
    		</div>
    		<div class="centered" id="questionForm">
    			<div id="intro">
-   				<div class="questionElement">
+   				<div class="questionElement" id="name">
 					<div class="question">Name</div>
 					<div class="answer">
-						<input type="text" class="inputValue" data-label="name"  data-section="intro">
-					</div>
+						<input type="text" class="inputValue inputEl" data-label="name"  data-section="intro">
+					</div>	
 				</div>
-				<div class="questionElement">
+				<div class="questionElement" id="email">
 					<div class="question">E-Mail</div>
 					<div class="answer">
-						<input type="text" class="inputValue" data-label="email" data-section="intro">
+						<input type="text" class="inputValue inputEl" data-label="email" data-section="intro">
 					</div>
 				</div>
 				<div class="questionElement bottomQuestion" id="role_selector">
@@ -73,7 +73,7 @@
 				</div>
    			</div>
    			<div id="partner-step-one">
-   				<div class="questionElement">
+   			<div class="questionElement">
 					<div class="question">How well has Reverie been able to deliver as per your expectations from the partnership? </div>
 					<div class="answer">
 						<div class="ratingsContainer">
@@ -174,7 +174,7 @@
 					<div class="answer">
 						<div class="ratingsContainer">
 							<div class="centered">
-								<div class="starRating" data-label="solutionEffectiveness" data-section="partnerStepOne"></div>
+								<div class="starRating ratingAnswer" data-label="solutionEffectiveness" data-section="partnerStepOne"></div>
 							</div>
 						</div>
 					</div>
@@ -313,7 +313,7 @@
 						<div class="ratingsContainer ">
 							<div class="star-with-question">
 								<div class="starQuestion">Insights related to the Industry</div>
-								<div class="starRating" data-label="industryInsights" data-section="partnerStepOne"></div>
+								<div class="starRating ratingAnswer" data-label="industryInsights" data-section="partnerStepOne"></div>
 							</div>
 						</div>
 					</div>
@@ -321,7 +321,7 @@
 						<div class="ratingsContainer ">
 							<div class="star-with-question">
 								<div class="starQuestion">Responsiveness to your queries</div>
-								<div class="starRating" data-label="queryResponsiveness" data-section="partnerStepOne"></div>
+								<div class="starRating ratingAnswer" data-label="queryResponsiveness" data-section="partnerStepOne"></div>
 							</div>
 						</div>
 					</div>
@@ -329,7 +329,7 @@
 						<div class="ratingsContainer ">
 							<div class="star-with-question">
 								<div class="starQuestion">Domain Expertise</div>
-								<div class="starRating" data-label="domainExpertise" data-section="partnerStepOne"></div>
+								<div class="starRating ratingAnswer" data-label="domainExpertise" data-section="partnerStepOne"></div>
 							</div>
 						</div>
 					</div>
@@ -561,12 +561,12 @@
 				<div class="questionElement bottomQuestion">
 					<div class="question">Please share any additional comments/suggestions:</div>
 					<div class="answer">
-						<textarea type="text" class="inputValue" data-label="additionalComment" data-section="partnerStepOne"></textarea>
+						<textarea type="text" class="inputValue inputEl ratingAnswer" data-label="additionalComment" data-section="partnerStepOne"></textarea>
 					</div>
 				</div>
 				<div class="questionElement">
 					<button type="button" class="btn btn-primary back" id="back" data-section="partnerStepOne"><i class="fa fa-arrow-left"></i></button>
-					<button type="button" class="btn btn-primary done" id="intro_next">Done</button>
+					<button type="button" class="btn btn-primary done" id="partner_step_one_next">Done</button>
 				</div>
    			</div>
    			<div id="customer-step-one">
@@ -671,7 +671,7 @@
 					<div class="answer">
 						<div class="ratingsContainer">
 							<div class="centered">
-								<div class="starRating" data-label="solutionEffectiveness" data-section="customerStepOne"></div>
+								<div class="starRating ratingAnswer" data-label="solutionEffectiveness" data-section="customerStepOne"></div>
 							</div>
 						</div>
 					</div>
@@ -682,7 +682,7 @@
 						<div class="ratingsContainer ">
 							<div class="star-with-question">
 								<div class="starQuestion">Skill in delivering solutions</div>
-								<div class="starRating" data-label="deliverySkills" data-section="customerStepOne"></div>
+								<div class="starRating ratingAnswer" data-label="deliverySkills" data-section="customerStepOne"></div>
 							</div>
 						</div>
 					</div>
@@ -690,7 +690,7 @@
 						<div class="ratingsContainer ">
 							<div class="star-with-question">
 								<div class="starQuestion">Responsiveness to your queries</div>
-								<div class="starRating" data-label="queryResponsiveness" data-section="customerStepOne"></div>
+								<div class="starRating ratingAnswer" data-label="queryResponsiveness" data-section="customerStepOne"></div>
 							</div>
 						</div>
 					</div>
@@ -698,7 +698,7 @@
 						<div class="ratingsContainer ">
 							<div class="star-with-question">
 								<div class="starQuestion">Domain Expertise</div>
-								<div class="starRating" data-label="domainExpertise" data-section="customerStepOne"></div>
+								<div class="starRating ratingAnswer" data-label="domainExpertise" data-section="customerStepOne"></div>
 							</div>
 						</div>
 					</div>
@@ -706,7 +706,7 @@
 						<div class="ratingsContainer ">
 							<div class="star-with-question">
 								<div class="starQuestion">Effectiveness of the engagement</div>
-								<div class="starRating" data-label="engagementEffectiveness" data-section="customerStepOne"></div>
+								<div class="starRating ratingAnswer" data-label="engagementEffectiveness" data-section="customerStepOne"></div>
 							</div>
 						</div>
 					</div>
@@ -929,7 +929,7 @@
 							<div class="ratingsContainer ">
 								<div class="star-with-question">
 									<div class="starQuestion">Quality of translation:</div>
-									<div class="starRating" data-label="deliverySkills" data-section="customerStepTwo"></div>
+									<div class="starRating ratingAnswer" data-label="translationQuality" data-section="customerStepTwo"></div>
 								</div>
 							</div>
 						</div>
@@ -937,7 +937,7 @@
 							<div class="ratingsContainer ">
 								<div class="star-with-question">
 									<div class="starQuestion">Time taken for translation:</div>
-									<div class="starRating" data-label="queryResponsiveness" data-section="customerStepTwo"></div>
+									<div class="starRating ratingAnswer" data-label="translationTat" data-section="customerStepTwo"></div>
 								</div>
 							</div>
 						</div>
@@ -1037,7 +1037,7 @@
 							<div class="ratingsContainer ">
 								<div class="star-with-question">
 									<div class="starQuestion">Technical Skills in delivering the solution</div>
-									<div class="starRating" data-label="techSkillsForDelivery" data-section="customerStepThree"></div>
+									<div class="starRating ratingAnswer" data-label="techSkillsForDelivery" data-section="customerStepThree"></div>
 								</div>
 							</div>
 						</div>
@@ -1045,7 +1045,7 @@
 							<div class="ratingsContainer ">
 								<div class="star-with-question">
 									<div class="starQuestion">Subject Matter Expertise</div>
-									<div class="starRating" data-label="sme" data-section="customerStepThree"></div>
+									<div class="starRating ratingAnswer" data-label="sme" data-section="customerStepThree"></div>
 								</div>
 							</div>
 						</div>
@@ -1053,7 +1053,7 @@
 					<div class="questionElement bottomQuestion">
 						<div class="question">Please share any additional comments/suggestions:</div>
 						<div class="answer">
-							<textarea type="text" class="inputValue" data-label="additionalComment" data-section="customerStepThree"></textarea>
+							<textarea type="text" class="inputValue inputEl ratingAnswer" data-label="additionalComment" data-section="customerStepThree"></textarea>
 						</div>
 					</div>
 					<div class="questionElement">

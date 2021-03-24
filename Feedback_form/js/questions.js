@@ -69,40 +69,17 @@ let formStructure = {
 
 	},
 	customerStepOne:{
-		deliveryExpectationRating: {
-			answer: null,
-			required: false,
-			comment: null
-		},
-		gtmTat: {
-			answer: null,
-			required: false,
-			comment: null
-		},
-		deliveryTimeline: {
-			answer: null,
-			required: false,
-			comment: null
-		},
+		
 	},
 	customerStepTwo:{
-		tsInteract:{
-			answer: null,
-			required: false,
-			comment: null
-		}
+		
 	},
 	customerStepThree:{
-		techInteract:{
-			answer: null,
-			required: false,
-			comment: null
-		}
 	}
 };
 
 
-//Function that makes it rock baby
+//Function that makes it rock
 
 (
 	function(){
@@ -143,8 +120,19 @@ let formStructure = {
 			let {section, label}= e.target.dataset;
 			if(!formStructure[section][label]){
 				formStructure[section][label] = {}
+				let parentsUntil = $($(`[data-section="${section}"][data-label='${label}']`)[0]).parentsUntil(".questionElement");
+				$(parentsUntil[parentsUntil.length-1]).removeClass("error")
 			}
 			formStructure[section][label]["answer"] = e.target.value;
+			if(formStructure.intro.email.answer && validateEmail(formStructure.intro.email.answer)){
+				$("#email").removeClass("error")
+			}
+			if(formStructure.intro.name.answer){
+				$("#name").removeClass("error")
+			}
+			if(formStructure.intro.role.answer){
+				$("#role_selector").removeClass("error")
+			}
 			if(label === "tsInteract" && e.target.value==="yes"){
 				$("#follow-customer-step-two").show()
 				$("#noTsInteract").hide();
@@ -196,12 +184,18 @@ let formStructure = {
 			e.preventDefault();
 			console.log($(e.target).attr("id"))
 			if($(e.target).attr("id") === "intro_next"){
-				if(!formStructure.intro.role.answer){
-					$("#role_selector").toggleClass("animate__animated animate__shakeX fast")
-					setTimeout(function(){
-						$("#role_selector").toggleClass("animate__animated animate__shakeX fast")
-
-					},500)
+				if(!formStructure.intro.role.answer || !formStructure.intro.name.answer || !formStructure.intro.email.answer || !validateEmail(formStructure.intro.email.answer)){
+					alert("All fields are required. Please fill in the information to continue")
+					if(!formStructure.intro.role.answer){
+						$("#role_selector").addClass("error")
+					}
+					if(!formStructure.intro.name.answer){
+						$("#name").addClass("error")
+					}
+					if(!formStructure.intro.email.answer || !validateEmail(formStructure.intro.email.answer )){
+						alert("Please enter a valid email")
+						$("#email").addClass("error")
+					}
 					return
 				}
 				byeForm("intro")
@@ -213,9 +207,37 @@ let formStructure = {
 					    callback: function(currentRating, $el){
 					    	let section = $el.data("section")
 					    	let label = $el.data("label")
+								if(!formStructure[section][label]){
+									formStructure[section][label] = {}
+									let parentsUntil = $($(`[data-section="${section}"][data-label='${label}']`)[0]).parentsUntil(".questionElement");
+								$(parentsUntil[parentsUntil.length-1]).removeClass("error")
+								}
 					    	formStructure[section][label]["answer"] = currentRating;
 					    }
 					});
+					$("#partner_step_one_next").click(function(e){
+						let validated = true;
+						let allLabels = []
+						$("#partner-step-one").find(".ratingAnswer").each(function(i,el){
+							allLabels.push($(el).data("label"))
+						})
+						let labelSet = new Set(allLabels);
+						allLabels = Array.from(labelSet);
+						allLabels.forEach(function(label,index){
+							if(!formStructure["partnerStepOne"][label] || !formStructure["partnerStepOne"][label]["answer"]){
+								validated = false
+								console.log(label, " not filled", $($(`[data-section="partnerStepOne"][data-label='${label}']`)[0]).parentsUntil(".questionElement"))
+								let parentsUntil = $($(`[data-section="partnerStepOne"][data-label='${label}']`)[0]).parentsUntil(".questionElement");
+								$(parentsUntil[parentsUntil.length-1]).addClass("error")
+							}
+						})
+						if(!validated){
+							alert("Please fill in all the questions before proceeding")
+						}
+						else{
+							done()
+						}
+					})
 				}
 				if(formStructure.intro.role.answer === "customer"){
 					hiForm("customer-step-one")
@@ -225,17 +247,89 @@ let formStructure = {
 					    callback: function(currentRating, $el){
 					    	let section = $el.data("section")
 					    	let label = $el.data("label")
+								if(!formStructure[section][label]){
+									formStructure[section][label] = {}
+									let parentsUntil = $($(`[data-section="${section}"][data-label='${label}']`)[0]).parentsUntil(".questionElement");
+								$(parentsUntil[parentsUntil.length-1]).removeClass("error")
+								}
 					    	formStructure[section][label]["answer"] = currentRating;
 					    }
 					});
 					$("#customer_step_one_next").click(function(e){
-						byeForm("customer-step-one");
-						hiForm("customer-step-two");
+						let validated = true;
+						let allLabels = []
+						$("#customer-step-one").find(".ratingAnswer").each(function(i,el){
+							allLabels.push($(el).data("label"))
+						})
+						let labelSet = new Set(allLabels);
+						allLabels = Array.from(labelSet);
+						allLabels.forEach(function(label,index){
+							if(!formStructure["customerStepOne"][label] || !formStructure["customerStepOne"][label]["answer"]){
+								validated = false
+								console.log(label, " not filled", $($(`[data-section="customerStepOne"][data-label='${label}']`)[0]).parentsUntil(".questionElement"))
+								let parentsUntil = $($(`[data-section="customerStepOne"][data-label='${label}']`)[0]).parentsUntil(".questionElement");
+								$(parentsUntil[parentsUntil.length-1]).addClass("error")
+							}
+						})
+						if(!validated){
+							alert("Please fill in all the questions before proceeding")
+						}
+						else{
+							byeForm("customer-step-one");
+							hiForm("customer-step-two");
+						}
 					})
 					$("#customer_step_two_next").click(function(e){
-						byeForm("customer-step-two");
-						hiForm("customer-step-three");
+						let validated = true;
+						let allLabels = []
+						$("#customer-step-two").find(".ratingAnswer").each(function(i,el){
+							allLabels.push($(el).data("label"))
+						})
+						let labelSet = new Set(allLabels);
+						allLabels = Array.from(labelSet);
+						allLabels.forEach(function(label,index){
+							if(!formStructure["customerStepTwo"][label] || !formStructure["customerStepTwo"][label]["answer"]){
+								validated = false
+								console.log(label, " not filled", $($(`[data-section="customerStepTwo"][data-label='${label}']`)[0]).parentsUntil(".questionElement"))
+								let parentsUntil = $($(`[data-section="customerStepTwo"][data-label='${label}']`)[0]).parentsUntil(".questionElement");
+								$(parentsUntil[parentsUntil.length-1]).addClass("error")
+							}
+						})
+						if(!validated){
+							alert("Please fill in all the questions before proceeding")
+						}
+						else{
+							byeForm("customer-step-two");
+							hiForm("customer-step-three");
+						}
 					})
+					$("#customer_step_three_done").click(function(e){
+						let validated = true;
+						let allLabels = []
+						$("#customer-step-three").find(".ratingAnswer").each(function(i,el){
+							allLabels.push($(el).data("label"))
+						})
+						let labelSet = new Set(allLabels);
+						allLabels = Array.from(labelSet);
+						allLabels.forEach(function(label,index){
+							if(!formStructure["customerStepThree"][label] || !formStructure["customerStepThree"][label]["answer"]){
+								validated = false
+								console.log(label, " not filled", $($(`[data-section="customerStepThree"][data-label='${label}']`)[0]).parentsUntil(".questionElement"))
+								let parentsUntil = $($(`[data-section="customerStepThree"][data-label='${label}']`)[0]).parentsUntil(".questionElement");
+								$(parentsUntil[parentsUntil.length-1]).addClass("error")
+							}
+						})
+						if(!validated){
+							alert("Please fill in all the questions before proceeding")
+						}
+						else{
+							done()
+						}
+					})
+					// $("#customer_step_two_next").click(function(e){
+					// 	byeForm("customer-step-two");
+					// 	hiForm("customer-step-three");
+					// })
 				}
 
 			}
@@ -269,7 +363,7 @@ let formStructure = {
 			}
 		})
 
-		$(".done").click(function(){
+		function done(){
 			byeForm("customer-step-three");
 			byeForm("partner-step-one");
 			hiForm("thankYou");
@@ -286,7 +380,7 @@ let formStructure = {
 			$.ajax(settings).done(function (response) {
 				console.log(response);
 			});
-		})
+		}
 	}
 )();
 
@@ -313,9 +407,6 @@ function displayScreen(screenName){
 	// 	let section = e.target.dataset.section;
 	// 	formStructure[section][target].answer = e.target.value
 	// })
-	setTimeout(function(){
-		console.log(formStructure);
-	},10000)
 }
 function scrollTo (el) {
 
@@ -326,4 +417,8 @@ function scrollTo (el) {
 	$('#questionForm').animate({
 		scrollTop: $(el).offset().top - $(window).height()/4
 	}, 600);
+}
+function validateEmail(email) {
+	const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	return re.test(String(email).toLowerCase());
 }
