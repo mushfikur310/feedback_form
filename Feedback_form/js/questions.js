@@ -255,7 +255,7 @@ let formStructure = {
 					    	formStructure[section][label]["answer"] = currentRating;
 					    }
 					});
-					$("#customer_step_one_next").click(function(e){
+					$(document).on("click", "#customer_step_one_next", function(e){
 						let validated = true;
 						let allLabels = []
 						$("#customer-step-one").find(".ratingAnswer").each(function(i,el){
@@ -279,7 +279,7 @@ let formStructure = {
 							hiForm("customer-step-two");
 						}
 					})
-					$("#customer_step_two_next").click(function(e){
+					$(document).on("click", "#customer_step_two_next", function(e){
 						let validated = true;
 						let allLabels = []
 						$("#customer-step-two").find(".ratingAnswer").each(function(i,el){
@@ -295,6 +295,11 @@ let formStructure = {
 								$(parentsUntil[parentsUntil.length-1]).addClass("error")
 							}
 						})
+						if(formStructure["customerStepTwo"]["tsInteract"]["answer"] === "no"){
+							byeForm("customer-step-two");
+							hiForm("customer-step-three");
+							return
+						}
 						if(!validated){
 							alert("Please fill in all the questions before proceeding")
 						}
@@ -303,7 +308,7 @@ let formStructure = {
 							hiForm("customer-step-three");
 						}
 					})
-					$("#customer_step_three_done").click(function(e){
+					$(document).on("click","#customer_step_three_done", function(e){
 						let validated = true;
 						let allLabels = []
 						$("#customer-step-three").find(".ratingAnswer").each(function(i,el){
@@ -319,6 +324,10 @@ let formStructure = {
 								$(parentsUntil[parentsUntil.length-1]).addClass("error")
 							}
 						})
+						if(formStructure["customerStepThree"]["techInteract"]["answer"] === "no"){
+							done()
+							return
+						}
 						if(!validated){
 							alert("Please fill in all the questions before proceeding")
 						}
