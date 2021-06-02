@@ -89,7 +89,9 @@
 }
 .comment-box{
 	width: 60%;
+  margin: 18px 0px;
 }
+
 
 .ratingsContainer label::hover{
 	background-color: rgba(0,0,0,0.2)
