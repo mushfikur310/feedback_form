@@ -213,6 +213,15 @@ let formStructure = {
 								$(parentsUntil[parentsUntil.length-1]).removeClass("error")
 								}
 					    	formStructure[section][label]["answer"] = currentRating;
+								//Show comments when Rating is clicked
+								if(label === "solutionEffectiveness"){
+									$(`.comment-box[data-label="${label}"]`).show();
+								}
+								if(label === "industryInsights" || label === "queryResponsiveness" || label === "domainExpertise"){
+									if(formStructure[section]["industryInsights"]["answer"] && formStructure[section]["queryResponsiveness"]["answer"] && formStructure[section]["domainExpertise"]["answer"]){
+										$(`.comment-box[data-label="industryInsightsGroup"]`).show();
+									}
+								}
 					    }
 					});
 					$("#partner_step_one_next").click(function(e){
@@ -253,6 +262,14 @@ let formStructure = {
 								$(parentsUntil[parentsUntil.length-1]).removeClass("error")
 								}
 					    	formStructure[section][label]["answer"] = currentRating;
+								if(label === "solutionEffectiveness"){
+									$(`.comment-box[data-label="${label}"]`).show();
+								}
+								if(label === "deliverySkills" || label === "queryResponsiveness" || label === "domainExpertise" || label === "engagementEffectiveness"){
+									if(formStructure[section]["deliverySkills"]["answer"] && formStructure[section]["queryResponsiveness"]["answer"] && formStructure[section]["domainExpertise"]["answer"]  && formStructure[section]["engagementEffectiveness"]["answer"]){
+										$(`.comment-box[data-label="performanceComment"]`).show();
+									}
+								}
 					    }
 					});
 					$(document).on("click", "#customer_step_one_next", function(e){
@@ -432,3 +449,26 @@ function validateEmail(email) {
 	const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 	return re.test(String(email).toLowerCase());
 }
+
+(function hideComments(){
+	var questions = ["How well did we help you in reducing the time to launch your product/service?",
+	"Has our team been able to deliver the product/solution as per your expectations and within agreed timelines?",
+	"Please rate the effectiveness of our solutions in resolving your problems",
+	"Please rate the Reverie team's overall performance on the following items",
+	"How comprehensive and innovative are Reverie’s products related to Indian languages?",
+	"Has the Reverie team been able to deliver the product/solution as per your expectations and within agreed timelines?",
+	"Please rate the effectiveness of our solutions in resolving your client needs & problems",
+	"Have we provided you relevant collaterals & effective demos to ensure sales effectiveness in building a better sales pipeline?",
+	"Please rate the Reverie team on the following parameters",
+	"Please rate the positive impact our products/solutions have on your clients?"]
+	var questionList = questions.map(function(q){
+		return q.toLowerCase()
+	})
+	$(".comment-box").each(function(i, cel){
+		var innerText = $(cel).parent().parent().siblings(".question").text().trim().toLowerCase()
+		console.log(questionList.indexOf(innerText)>-1 ?innerText  : "not found")
+		if(!(questionList.indexOf(innerText)>-1)){
+			$(cel).html("")
+		}
+	})
+})()
