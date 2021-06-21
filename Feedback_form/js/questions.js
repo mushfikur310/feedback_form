@@ -123,7 +123,9 @@ let formStructure = {
 				let parentsUntil = $($(`[data-section="${section}"][data-label='${label}']`)[0]).parentsUntil(".questionElement");
 				$(parentsUntil[parentsUntil.length-1]).removeClass("error")
 			}
-			formStructure[section][label]["answer"] = e.target.value;
+			if(!$(e.target).hasClass("comment")){
+				formStructure[section][label]["answer"] = e.target.value;
+			}
 			if(formStructure.intro.email.answer && validateEmail(formStructure.intro.email.answer)){
 				$("#email").removeClass("error")
 			}
@@ -257,7 +259,7 @@ let formStructure = {
 					    	let section = $el.data("section")
 					    	let label = $el.data("label")
 								if(!formStructure[section][label]){
-									formStructure[section][label] = {}
+									formStructure[section][label] = {answer: ""}
 									let parentsUntil = $($(`[data-section="${section}"][data-label='${label}']`)[0]).parentsUntil(".questionElement");
 								$(parentsUntil[parentsUntil.length-1]).removeClass("error")
 								}
@@ -465,7 +467,9 @@ function validateEmail(email) {
 	"Please rate the effectiveness of our solutions in resolving your client needs & problems",
 	"Have we provided you relevant collaterals & effective demos to ensure sales effectiveness in building a better sales pipeline?",
 	"Please rate the Reverie team on the following parameters",
-	"Please rate the positive impact our products/solutions have on your clients?"]
+	"Please rate the positive impact our products/solutions have on your clients?",
+	"Please rate our translations based on"
+]
 	var questionList = questions.map(function(q){
 		return q.toLowerCase()
 	})
