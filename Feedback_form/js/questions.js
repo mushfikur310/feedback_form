@@ -270,6 +270,11 @@ let formStructure = {
 										$(`.comment-box[data-label="performanceComment"]`).show();
 									}
 								}
+								if(label === "translationQuality" || label === "translationTat"){
+									if(formStructure[section]["translationQuality"]["answer"] && formStructure[section]["translationTat"]["answer"]){
+										$(`.comment-box[data-label="translationServiceComment"]`).show();
+									}
+								}
 					    }
 					});
 					$(document).on("click", "#customer_step_one_next", function(e){
