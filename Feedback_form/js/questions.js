@@ -4,6 +4,7 @@ let partnerPipeline = ["intro", "partner-step-one"];
 let customerPipeline = ["intro", "customer-step-one", "customer-step-two", "customer-step-three" ]
 let partnerFormIndex = 0;
 let customerFormIndex = 0;
+var jsonData = {}
 let formStructure = {
 	intro: {
 		filledRequiredQuestions: false,
@@ -100,17 +101,36 @@ let formStructure = {
 
 		// Control what happens on focus
 		$(".inputEl").focus(function(e){
-
 			//Sroll the focus
 			scrollTo(e.target);
-			
 			if($(e.target).hasClass("bottomQuestion")){
 				$("#intro_next").addClass("animate__animated animate__heartBeat");
 			}
 			let dataLabel = $(e.target).data("label")
 			$(`.comment-box[data-label="${dataLabel}"]`).show();
+			var sec = e.target.dataset.section
+			var lab = e.target.dataset.label
+			var ques = $(e.target).closest(".questionElement").find(".question").html()
+			if(!jsonData[sec]){
+				jsonData[sec] = {}
+			}
+			jsonData[`${sec}_${lab}`] = ques
+			console.log(jsonData)
 		})
 
+		$(".starRating").click(function(e){
+			var sec = e.currentTarget.dataset.section
+			var lab = e.currentTarget.dataset.label
+			var ques = $(e.target).closest(".star-with-question").find(".starQuestion").html()
+			if(!ques){
+				ques = $(e.target).closest(".questionElement").find(".question").html()
+			}
+			if(!jsonData[sec]){
+				jsonData[sec] = {}
+			}
+			jsonData[`${sec}_${lab}`] = ques
+			console.log(jsonData)
+		})
 		//Control what happens on blur
 		$(".inputEl").blur(function(e){
 			$(e.target).toggleClass("selected")
@@ -219,8 +239,12 @@ let formStructure = {
 								if(label === "solutionEffectiveness"){
 									$(`.comment-box[data-label="${label}"]`).show();
 								}
-								if(label === "industryInsights" || label === "queryResponsiveness" || label === "domainExpertise"){
-									if(formStructure[section]["industryInsights"]["answer"] && formStructure[section]["queryResponsiveness"]["answer"] && formStructure[section]["domainExpertise"]["answer"]){
+								if(label === "industryInsights" || label === "queryResponsiveness" || label === "domainExpertise" || label === "technicalCompetency"){
+									if(formStructure[section]["industryInsights"]["answer"] 
+											&& formStructure[section]["queryResponsiveness"]["answer"] 
+											&& formStructure[section]["domainExpertise"]["answer"] 
+											&& formStructure[section]["technicalCompetency"]["answer"]
+										){
 										$(`.comment-box[data-label="industryInsightsGroup"]`).show();
 									}
 								}

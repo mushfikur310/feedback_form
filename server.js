@@ -2,9 +2,8 @@ const express = require('express');
 const cors = require('cors');
 
 const app = express();
-
 let corsOptions = {
-  origin: ['*','http://localhost:3001','http://dev.prabandhak.in', 'http://feedback.reverieinc.com'],
+  origin: ['*','http://localhost:8000','http://dev.prabandhak.in', 'http://feedback.reverieinc.com'],
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 // Init Middlewares
