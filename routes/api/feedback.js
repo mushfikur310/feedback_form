@@ -145,7 +145,7 @@ router.post('/', async (req, res) => {
         }
         feedbackObj["qna"] = qna
 
-        let insert  = await dbc.collection('feedback').insertOne(feedbackObj);
+        let insert  = await dbc.collection('2022_feedback').insertOne(feedbackObj);
         res.json({success: true, msg: 'Feedback has been submitted successfully'});        
     } catch (err) {
         console.error(err.message);
